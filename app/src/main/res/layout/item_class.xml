@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp">
+
+    <RelativeLayout
+        android:background="#264354"
+        android:layout_width="180dp"
+        android:layout_height="110dp">
+
+        <LinearLayout
+            android:id="@+id/l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtnameclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txtsubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txtmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_name" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_local" />
+
+        <TextView
+            android:id="@+id/txtarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/img"
+            android:text="@string/app_name"
+            android:textColor="#0fbe37"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtonline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0fbe37"
+            android:paddingRight="10dp"
+            android:textSize="10dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/app_name"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

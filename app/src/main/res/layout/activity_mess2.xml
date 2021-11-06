@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#172738"
+    >
+
+    <TextView
+        android:id="@+id/editText11"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/header__box"
+        android:text="Phan Thiện"
+        android:paddingTop="20dp"
+        android:textColor="#707070"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:paddingLeft="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/editText11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText11"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mess_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/avt"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintBottom_toBottomOf="@+id/editText11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="220dp"
+        android:background="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/editText11"
+        app:layout_constraintStart_toEndOf="@+id/mess_image"
+        app:layout_constraintTop_toTopOf="@+id/editText11"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <ImageButton
+        android:layout_width="5dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ic_baseline_more_vert_24"
+
+        app:layout_constraintBottom_toBottomOf="@+id/editText11"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/editText11"
+        app:layout_constraintVertical_bias="0.525" />
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/box_30dp"
+        android:hint="Tin nhắn văn bản"
+        android:paddingLeft="20dp"
+        android:textColor="#707070"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintVertical_bias="1.01" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/ic_file_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintHorizontal_bias="0.02"
+        android:background="@drawable/ic_circle_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_microphone"
+        app:layout_constraintBottom_toBottomOf="@+id/editText12"
+        app:layout_constraintEnd_toEndOf="@+id/editText12"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="@+id/editText12"
+        app:layout_constraintTop_toTopOf="@+id/editText12"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/ic_baseline_keyboard_arrow_up_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/editText12"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintVertical_bias="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

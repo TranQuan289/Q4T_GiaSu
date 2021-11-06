@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rlt"
+        android:background="#264354"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_avt3"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/giasu" />
+
+        <TextView
+            android:id="@+id/txtclass3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_avt3"
+            android:layout_marginLeft="13dp"
+            android:text="Lớp: 10"
+            android:layout_marginBottom="110dp"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+
+            <TextView
+                android:id="@+id/txtname3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/img_avt3"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txtsubject3"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="34dp"
+                android:layout_toRightOf="@id/img_avt3"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txtaddress3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:textColor="#0fbe37"
+                android:textSize="10dp"
+                android:layout_marginTop="62dp"
+                android:layout_toRightOf="@id/img_avt3"
+                android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/txtonline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:text="@string/app_name"
+            android:textColor="#0fbe37"
+            android:textSize="10dp" />
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="17dp"
+            android:layout_marginTop="57dp"
+            android:layout_toRightOf="@id/img_avt3"
+            android:src="@drawable/ic_local" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

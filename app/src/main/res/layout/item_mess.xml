@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rltl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_taotindang"
+        android:layout_marginBottom="20dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mess_image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/header"
+            app:civ_border_color="#FF000000" />
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="18dp"
+        android:text="Ba Cún" />
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="100dp"
+        android:text="Xin chào mình muốn thuê bạn làm..." />
+
+        <ImageView
+            android:id="@+id/seen"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_check" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

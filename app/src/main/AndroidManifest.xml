@@ -27,6 +27,9 @@
             android:name="com.example.android.Register.Register_Teacher"
             android:exported="true" />
         <activity
+            android:name="com.example.android.Register.Register"
+            android:exported="true" />
+        <activity
             android:name=".Login"
             android:exported="true" />
         <activity

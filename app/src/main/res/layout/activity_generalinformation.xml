@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     >
     <TextView
         android:id="@+id/TextView8"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="139dp"
         android:background="@drawable/box_blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -239,6 +240,7 @@
         app:layout_constraintStart_toEndOf="@+id/hand9"
         app:layout_constraintTop_toBottomOf="@+id/txtage6" />
     <ImageView
+        android:id="@+id/back"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="@drawable/ic_baseline_keyboard_arrow_left_24"

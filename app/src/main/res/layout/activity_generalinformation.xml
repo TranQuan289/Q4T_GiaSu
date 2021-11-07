@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/TextView8"
+        android:layout_width="411dp"
+        android:layout_height="139dp"
+        android:background="@drawable/box_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/edWhite"
+        android:layout_width="match_parent"
+        android:layout_height="538dp"
+        android:layout_marginTop="192dp"
+        android:background="@drawable/box_white"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="151dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="520dp"
+        android:src="@drawable/avt"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintBottom_toBottomOf="@+id/edWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TextView8"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Văn A"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Học sinh"
+        android:textColor="#1492E6"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/TextView7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_graduation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/txt_tthocsinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Thông tin học sinh"
+        android:textColor="#F00A36"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageView
+        android:id="@+id/hand1"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/hand"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand1" />
+
+    <ImageView
+        android:id="@+id/hand5"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand" />
+
+    <ImageView
+        android:id="@+id/hand6"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand5" />
+
+    <ImageView
+        android:id="@+id/hand7"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand6" />
+
+    <ImageView
+        android:id="@+id/hand8"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand7" />
+
+    <ImageView
+        android:id="@+id/hand9"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_hand_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand8" />
+
+    <TextView
+        android:id="@+id/txtage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="27dp"
+        android:text="Tuổi: 15"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tthocsinh" />
+    <TextView
+        android:id="@+id/txtage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Giới tính: Nam"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand"
+        app:layout_constraintTop_toBottomOf="@+id/txtage" />
+    <TextView
+        android:id="@+id/txtage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Địa chỉ : Đà Nẵng"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand5"
+        app:layout_constraintTop_toBottomOf="@+id/txtage2" />
+    <TextView
+        android:id="@+id/txtage4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Lớp : 9"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand6"
+        app:layout_constraintTop_toBottomOf="@+id/txtage3" />
+    <TextView
+        android:id="@+id/txtage5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Email: abc@gmail,com"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand7"
+        app:layout_constraintTop_toBottomOf="@+id/txtage4" />
+
+    <TextView
+        android:id="@+id/txtage6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Môn học : Toán, lý , hóa"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand8"
+        app:layout_constraintTop_toBottomOf="@+id/txtage5" />
+    <TextView
+        android:id="@+id/txtage7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Hình thức học : Online"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/hand9"
+        app:layout_constraintTop_toBottomOf="@+id/txtage6" />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
+        app:layout_constraintBottom_toTopOf="@+id/profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TextView8"
+        app:layout_constraintVertical_bias="0.269" />
+</androidx.constraintlayout.widget.ConstraintLayout>

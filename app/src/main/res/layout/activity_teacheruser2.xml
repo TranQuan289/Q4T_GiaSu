@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editText8"
+    <TextView
+        android:id="@+id/TextView8"
         android:layout_width="match_parent"
         android:layout_height="186dp"
         android:background="@drawable/box_blue"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText8" />
+        app:layout_constraintTop_toTopOf="@+id/TextView8" />
 
     <TextView
         android:id="@+id/txtName"
@@ -57,8 +57,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
-    <EditText
-        android:id="@+id/editText7"
+    <TextView
+        android:id="@+id/TextView7"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="20dp"
@@ -186,7 +186,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText8"
+        app:layout_constraintTop_toTopOf="@+id/TextView8"
         app:layout_constraintVertical_bias="0.269" />
 
     <TextView
@@ -204,8 +204,8 @@ Em nhiệt tình và có trách nhiệm với học sinh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtage4" />
-    <EditText
-        android:id="@+id/editText10"
+    <TextView
+        android:id="@+id/TextView10"
         android:layout_width="30dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
@@ -224,7 +224,7 @@ Em nhiệt tình và có trách nhiệm với học sinh"
         android:text=" THÔNG TIN GIA SƯ"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/editText10"
+        app:layout_constraintStart_toEndOf="@+id/TextView10"
         app:layout_constraintTop_toBottomOf="@id/text" />
 
     <ImageView

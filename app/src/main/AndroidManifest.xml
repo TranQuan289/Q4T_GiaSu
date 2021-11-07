@@ -27,16 +27,13 @@
             android:name="com.example.android.Register.Register_Teacher"
             android:exported="true" />
         <activity
-            android:name="com.example.android.Register.Register"
+            android:name=".Login"
             android:exported="true" />
         <activity
             android:name=".Intro"
             android:exported="true" />
         <activity
             android:name=".Delay"
-            android:exported="true" />
-        <activity
-            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

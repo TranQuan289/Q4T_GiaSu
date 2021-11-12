@@ -36,6 +36,9 @@
             android:name=".Intro"
             android:exported="true" />
         <activity
+            android:name=".ForgotPass"
+            android:exported="true" />
+        <activity
             android:name=".Delay"
             android:exported="true">
             <intent-filter>

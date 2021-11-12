@@ -13,7 +13,7 @@ import com.example.android.Register.Register;
 
 public class Login extends AppCompatActivity {
 
-    TextView register;
+    TextView register,forgot;
     Button btnlogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
         TextView register = (TextView) findViewById(R.id.register);
+        TextView forgot = (TextView) findViewById(R.id.forgotpass);
         Button btnlogin = (Button) findViewById(R.id.btnlogin);
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,12 @@ public class Login extends AppCompatActivity {
                 startActivity(register);
             }
         });
-
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent forgot = new Intent(Login.this, ForgotPass.class);
+                startActivity(forgot);
+            }
+        });
     }
 }

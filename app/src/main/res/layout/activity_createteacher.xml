@@ -35,7 +35,7 @@
         android:id="@+id/txtMonHoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:text="MÔN HỌC"
         android:textColor="#707070"
         android:textStyle="bold"

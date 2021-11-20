@@ -19,9 +19,9 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_register);
-        Button button = (Button) findViewById(R.id.btnnext);
-        RadioButton radioButton1 = (RadioButton) findViewById(R.id.rb1);
-        RadioButton radioButton2 = (RadioButton) findViewById(R.id.rb2);
+        button = (Button) findViewById(R.id.btnnext);
+        radioButton1 = (RadioButton) findViewById(R.id.rb1);
+        radioButton2 = (RadioButton) findViewById(R.id.rb2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

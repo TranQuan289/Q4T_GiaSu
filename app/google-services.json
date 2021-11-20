@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "518931981756",
+    "project_id": "giasu-fef6d",
+    "storage_bucket": "giasu-fef6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518931981756:android:dcf4405d318d36eb3d77b9",
+        "android_client_info": {
+          "package_name": "com.example.android.giasu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518931981756-mkjq0dhvovem2dpapqk43pv44abcfj32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEsioTjBvTeoJzsKz3WqlJeMW7W5UzAqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518931981756-mkjq0dhvovem2dpapqk43pv44abcfj32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

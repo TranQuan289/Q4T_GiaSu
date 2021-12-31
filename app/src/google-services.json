@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95299542949",
+    "project_id": "q4t-giasu",
+    "storage_bucket": "q4t-giasu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95299542949:android:7bd8fac8d9ccbf4a0dd24c",
+        "android_client_info": {
+          "package_name": "com.example.android.Register"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95299542949-0pkn121c7dq99vjav4e7i2k332f6ha3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM6Mn39Sk8FCErtWDt8teefxSlZapzSY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95299542949-0pkn121c7dq99vjav4e7i2k332f6ha3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

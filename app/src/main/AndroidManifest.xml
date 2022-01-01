@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -33,19 +32,20 @@
             android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".Intro"
+            android:name=".SplashActivity"
             android:exported="true" />
         <activity
             android:name=".ForgotPass"
             android:exported="true" />
         <activity
-            android:name=".Delay"
+            android:name=".Intro"
+            android:enabled="true"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
     </application>
 

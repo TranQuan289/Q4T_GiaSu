@@ -30,29 +30,29 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_register);
-        button = (Button) findViewById(R.id.btnnext);
-        radioButton1 = (RadioButton) findViewById(R.id.rb1);
-        radioButton2 = (RadioButton) findViewById(R.id.rb2);
-        edttxtemail =(EditText) findViewById(R.id.edttxtemail);
-        edttxtpass2 = (EditText)findViewById(R.id.edttxtpass2);
+        button =  findViewById(R.id.btnnext);
+        radioButton1 = findViewById(R.id.rb1);
+        radioButton2 =  findViewById(R.id.rb2);
+        edttxtemail = findViewById(R.id.edttxtemail);
+        edttxtpass2 = findViewById(R.id.edttxtpass2);
         String email =edttxtemail.getText().toString();
         String password =edttxtpass2.getText().toString();
-        mAuth = FirebaseAuth.getInstance();
-        mAuth.createUserWithEmailAndPassword("voqqqqqqq@gmail.com"," password")
-                .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-
-                            Toast.makeText(getApplicationContext(), "Thành công",Toast.LENGTH_LONG).show();
-
-                        } else {
-
-                            Toast.makeText(getApplicationContext(), "thất bại",Toast.LENGTH_LONG).show();
-
-                        }
-                    }
-                });
+//        mAuth = FirebaseAuth.getInstance();
+//        mAuth.createUserWithEmailAndPassword("voqqqqqqq@gmail.com"," password")
+//                .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//
+//                            Toast.makeText(getApplicationContext(), "Thành công",Toast.LENGTH_LONG).show();
+//
+//                        } else {
+//
+//                            Toast.makeText(getApplicationContext(), "thất bại",Toast.LENGTH_LONG).show();
+//
+//                        }
+//                    }
+//                });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

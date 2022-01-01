@@ -29,5 +29,11 @@ public class Fragment_email extends Fragment {
     private void replaceFragment(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         transaction.replace(R.id.constraintLayout,fragment).addToBackStack(null).commit();
+        finishActivity();
+    }
+    private void finishActivity() {
+        if(getActivity() != null) {
+            getActivity().finish();
+        }
     }
 }

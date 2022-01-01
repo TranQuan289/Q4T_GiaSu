@@ -13,19 +13,19 @@ import com.example.android.Register.Register;
 public class Login extends AppCompatActivity {
 
     TextView register,forgot;
-    Button btnlogin;
+    Button btnLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
-        TextView register = (TextView) findViewById(R.id.register);
-        TextView forgot = (TextView) findViewById(R.id.forgotpass);
-        Button btnlogin = (Button) findViewById(R.id.btnlogin);
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+         register = findViewById(R.id.register);
+        forgot =  findViewById(R.id.forgotpass);
+        btnLogin = findViewById(R.id.btnlogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent main = new Intent(Login.this, MainActivity.class);
+                Intent main = new Intent(Login.this,MainActivity.class);
                 startActivity(main);
             }
         });

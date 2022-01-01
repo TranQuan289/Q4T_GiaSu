@@ -162,6 +162,15 @@
         <entry key="..\:/android/GiaSu/app/src/main/res/menu/menu_bottom.xml" value="0.3333333333333333" />
         <entry key="..\:/android/GiaSu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2128205128205128" />
         <entry key="..\:/android/GiaSu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2128205128205128" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_create.xml" value="0.15307971014492755" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_createuser4.xml" value="0.15307971014492755" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_delay.xml" value="0.15307971014492755" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_list.xml" value="0.15307971014492755" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_login.xml" value="0.1598731884057971" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_user2.xml" value="0.17300724637681159" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_list2.xml" value="0.17300724637681159" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_photo.xml" value="0.17300724637681159" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/main_activity.xml" value="0.1598731884057971" />
       </map>
     </option>
   </component>

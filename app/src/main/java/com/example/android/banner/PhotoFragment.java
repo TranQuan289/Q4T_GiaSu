@@ -24,7 +24,7 @@ public class PhotoFragment extends Fragment {
         Bundle bundle = getArguments();
         Photo photo = (Photo) bundle.get("objet_photo");
 
-        ImageView imgPhoto = mview.findViewById(R.id.img_photo);
+        ImageView imgPhoto = view.findViewById(R.id.img_photo);
         imgPhoto.setImageResource(photo.getResourceId());
         return view;
     }

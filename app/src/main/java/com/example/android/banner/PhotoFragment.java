@@ -14,18 +14,18 @@ import com.example.android.giasu.R;
 
 public class PhotoFragment extends Fragment {
 
-    private View mview;
+    private View view;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mview = inflater.inflate(R.layout.fragment_photo, container, false);
+        view = inflater.inflate(R.layout.fragment_photo, container, false);
 
         Bundle bundle = getArguments();
         Photo photo = (Photo) bundle.get("objet_photo");
 
         ImageView imgPhoto = mview.findViewById(R.id.img_photo);
         imgPhoto.setImageResource(photo.getResourceId());
-        return mview;
+        return view;
     }
 }

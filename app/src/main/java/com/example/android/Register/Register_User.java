@@ -24,6 +24,7 @@ public class Register_User extends AppCompatActivity {
             public void onClick(View view) {
                 Intent main = new Intent(Register_User.this, Login.class);
                 startActivity(main);
+                finish();
             }
         });
     }

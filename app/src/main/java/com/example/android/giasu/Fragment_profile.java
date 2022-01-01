@@ -32,5 +32,11 @@ public class Fragment_profile extends Fragment {
     private void replaceFragment4(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
+        finishActivity();
+    }
+    private void finishActivity() {
+        if(getActivity() != null) {
+            getActivity().finish();
+        }
     }
 }

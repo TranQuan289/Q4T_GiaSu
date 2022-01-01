@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
 
-
 import java.util.List;
 
 public class TeacherUserAdapter extends RecyclerView.Adapter<TeacherUserAdapter.UserViewHolder> {

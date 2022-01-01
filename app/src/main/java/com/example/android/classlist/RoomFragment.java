@@ -11,8 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android.classlist.Room;
-import com.example.android.classlist.RoomAdapter;
 import com.example.android.giasu.R;
 
 import java.util.ArrayList;
@@ -33,17 +31,17 @@ public class RoomFragment extends Fragment {
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext()));
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         roomList = new ArrayList<>();
-        Room ob1= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h",R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
+        Room ob1= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
         roomList.add(ob1);
-        Room ob2= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h",R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
+        Room ob2= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
         roomList.add(ob2);
-        Room ob3= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h",R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
+        Room ob3= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
         roomList.add(ob3);
-        Room ob4= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h",R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
+        Room ob4= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
         roomList.add(ob4);
-        Room ob5= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h",R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
+        Room ob5= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
         roomList.add(ob5);
-        Room ob6= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h",R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
+        Room ob6= new Room("Lớp : 7","Môn : Toán","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu","Hình thức dạy: online");
         roomList.add(ob6);
         rcvRoom.setAdapter(new RoomAdapter(roomList));
         return v;

@@ -1,10 +1,8 @@
 package com.example.android.mess;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
-import com.example.android.teacherclass.TeacherClassAdapter;
 
 import java.util.List;
 
@@ -35,7 +32,7 @@ public class messAdapter extends RecyclerView.Adapter<messAdapter.messViewHolder
     @Override
     public messViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mess, parent,false);
-        return new messAdapter.messViewHolder(view);
+        return new messViewHolder(view);
     }
 
     @Override

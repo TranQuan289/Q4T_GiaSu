@@ -1,15 +1,8 @@
 package com.example.android.create;
 
-import android.widget.Button;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-
-import com.example.android.giasu.Fragment_create;
 
 public class CreateAdapter extends FragmentStateAdapter {
 

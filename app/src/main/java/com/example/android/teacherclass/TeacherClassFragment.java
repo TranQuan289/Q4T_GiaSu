@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
-import com.example.android.teacheruser.TeacherUser2;
-import com.example.android.teacheruser.TeacherUserAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,15 +49,15 @@ public class TeacherClassFragment extends Fragment {
     }
     private List<TeacherClass> getmListTeacher(){
         List<TeacherClass> list = new ArrayList<>();
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá",R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
+        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
         return list;
     }
 }

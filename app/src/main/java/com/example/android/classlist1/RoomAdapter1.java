@@ -23,9 +23,9 @@ public class RoomAdapter1 extends RecyclerView.Adapter<RoomAdapter1.UserViewHold
     }
     @NonNull
     @Override
-    public RoomAdapter1.UserViewHolder1 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UserViewHolder1 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_classlist, parent,false);
-        return new RoomAdapter1.UserViewHolder1(view);
+        return new UserViewHolder1(view);
     }
 
     @Override

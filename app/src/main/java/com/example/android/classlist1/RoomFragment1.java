@@ -13,8 +13,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android.classlist1.Room1;
-import com.example.android.classlist1.RoomAdapter1;
 import com.example.android.giasu.Fragment_home;
 import com.example.android.giasu.R;
 

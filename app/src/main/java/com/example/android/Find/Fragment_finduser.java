@@ -11,8 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android.Find.user;
-import com.example.android.Find.userAdapter;
 import com.example.android.giasu.R;
 
 import java.util.ArrayList;

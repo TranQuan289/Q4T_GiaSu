@@ -58,7 +58,12 @@ public class Fragment_home extends Fragment {
         mviewall = v.findViewById(R.id.txtviewall);
         mviewall1 = v.findViewById(R.id.txtviewall1);
         img = v.findViewById(R.id.img1);
-
+        mviewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                replaceFragment4(new TeacherClassFragment1());
+            }
+        });
         mviewall1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,28 +98,24 @@ public class Fragment_home extends Fragment {
     }
     private void replaceFragment(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.rcv_user1,fragment).addToBackStack(null).commit();
-        finishActivity();
+        transaction.replace(R.id.rcv_user1,fragment).commit();
     //        transaction.replace(R.id.rcv_user3,fragment);
     }
     private void replaceFragment2(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         //transaction.replace(R.id.rcv_user1,fragment);
-        transaction.replace(R.id.rcv_user2,fragment).addToBackStack(null).commit();
-        finishActivity();
+        transaction.replace(R.id.rcv_user2,fragment).commit();
         //        transaction.replace(R.id.rcv_user3,fragment);
     }
     private void replaceFragment3(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         //transaction.replace(R.id.rcv_user1,fragment);
-        transaction.replace(R.id.rcv_user3,fragment).addToBackStack(null).commit();
-        finishActivity();
+        transaction.replace(R.id.rcv_user3,fragment).commit();
     }
     private void replaceFragment4(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         //transaction.replace(R.id.rcv_user1,fragment);
         transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
-        finishActivity();
     }
 
     private List<Photo> getListPhoto(){
@@ -123,11 +124,6 @@ public class Fragment_home extends Fragment {
         list.add(new Photo(R.drawable.banner2));
         list.add(new Photo(R.drawable.banner3));
         return list;
-    }
-    private void finishActivity() {
-        if(getActivity() != null) {
-            getActivity().finish();
-        }
     }
 
     @Override

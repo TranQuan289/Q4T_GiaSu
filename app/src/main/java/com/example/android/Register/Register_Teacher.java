@@ -1,11 +1,11 @@
 package com.example.android.Register;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.giasu.Login;
 import com.example.android.giasu.R;
@@ -24,7 +24,6 @@ public class Register_Teacher extends AppCompatActivity {
             public void onClick(View view) {
                 Intent main = new Intent(Register_Teacher.this, Login.class);
                 startActivity(main);
-                finish();
             }
         });
     }

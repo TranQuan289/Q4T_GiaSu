@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.android.Find.FindAdapter;
 import com.example.android.giasu.Fragment_home;
 import com.example.android.giasu.R;
 import com.google.android.material.tabs.TabLayout;

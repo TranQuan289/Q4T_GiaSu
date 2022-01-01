@@ -11,8 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
-import com.example.android.teacheruser.TeacherUser;
-import com.example.android.teacheruser.TeacherUserAdapter;
 
 import java.util.List;
 
@@ -35,7 +33,7 @@ public class TeacherClassAdapter extends RecyclerView.Adapter<TeacherClassAdapte
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_teacherlist, parent,false);
-        return new TeacherClassAdapter.UserViewHolder(view);
+        return new UserViewHolder(view);
     }
 
     @Override

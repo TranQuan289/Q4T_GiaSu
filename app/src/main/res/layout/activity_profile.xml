@@ -5,172 +5,175 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#172738">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="92dp"
-        android:layout_height="85dp"
-        android:src="@drawable/avt"
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072" />
-    <TextView
-        android:id="@+id/txt_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Nguyễn Văn A"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Học sinh"
-        android:textColor="#1492E6"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="516dp"
-        android:background="@drawable/ic_person"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
-        app:layout_constraintVertical_bias="0.491" />
-    <TextView
-        android:id="@+id/txt_proflie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="Thông tin chung"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="sans-serif"
-        android:text="Cài đặt tài khoản"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/txt_proflie" />
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="sans-serif"
-        android:text="Quản lý lớp học"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"/>
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="sans-serif"
-        android:text="Quản lý yêu cầu"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintVertical_bias=".08">
 
-    <TextView
-        android:id="@+id/textlogout"
-        android:layout_width="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/avt" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="Nguyễn Văn A"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="Học sinh"
+            android:textColor="#1492E6"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:fontFamily="sans-serif"
-        android:text="Đăng xuất"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.1">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/ic_person" />
+
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/imageView6"
+            android:fontFamily="sans-serif"
+            android:text="Quảng lý thông tin"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProfile"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="sans-serif"
+            android:text="Thay đổi mật khẩu"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="sans-serif"
+            android:text="Lịch sử lớp học"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="sans-serif"
+            android:text="Thông tin ứng dụng"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="sans-serif"
+            android:text="Đăng xuất"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+             />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/imageView13"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+           />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/imageView14"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/imageView15"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/ic_person"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/ic_person"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/ic_person"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/ic_person"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-    <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/imageView17"
         android:layout_width="224dp"
         android:layout_height="194dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/anh_treem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textlogout"
-        app:layout_constraintVertical_bias="0.7" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintVertical_bias="0.1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

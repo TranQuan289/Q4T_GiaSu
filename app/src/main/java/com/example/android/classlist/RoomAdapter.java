@@ -10,8 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
-import com.example.android.teacheruser.TeacherUser;
-import com.example.android.teacheruser.TeacherUserAdapter;
 
 import java.util.List;
 
@@ -26,9 +24,9 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.UserViewHolder
 
     @NonNull
     @Override
-    public RoomAdapter.UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_class, parent,false);
-        return new RoomAdapter.UserViewHolder(view);
+        return new UserViewHolder(view);
     }
 
     @Override

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.android.create.CreateTeacherFragment;
 import com.example.android.create.CreateUserFragment;
 
 public class FindAdapter extends FragmentStatePagerAdapter {

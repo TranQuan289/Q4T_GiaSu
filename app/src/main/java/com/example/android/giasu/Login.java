@@ -1,31 +1,30 @@
 package com.example.android.giasu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.android.Register.Register;
 
 public class Login extends AppCompatActivity {
 
-    TextView register,forgot;
-    Button btnLogin;
+    TextView register;
+    Button btnlogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
-         register = findViewById(R.id.register);
-        forgot =  findViewById(R.id.forgotpass);
-        btnLogin = findViewById(R.id.btnlogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        TextView register = (TextView) findViewById(R.id.register);
+        Button btnlogin = (Button) findViewById(R.id.btnlogin);
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent main = new Intent(Login.this,MainActivity.class);
+                Intent main = new Intent(Login.this, MainActivity.class);
                 startActivity(main);
             }
         });
@@ -36,12 +35,6 @@ public class Login extends AppCompatActivity {
                 startActivity(register);
             }
         });
-        forgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent forgot = new Intent(Login.this, ForgotPass.class);
-                startActivity(forgot);
-            }
-        });
+
     }
 }

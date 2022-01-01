@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
-import com.example.android.teacherclass.TeacherClass2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,13 +44,13 @@ public class messFragment extends Fragment {
     }
     private List<mess> getMessList(){
         List<mess> list = new ArrayList<>();
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
-        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép",R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
+        list.add(new mess(R.drawable.avt,"Phan Thiện","Không học thôi anh không ép", R.drawable.ic_check));
         return list;
     }
 }

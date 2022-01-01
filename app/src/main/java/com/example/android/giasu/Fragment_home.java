@@ -58,12 +58,7 @@ public class Fragment_home extends Fragment {
         mviewall = v.findViewById(R.id.txtviewall);
         mviewall1 = v.findViewById(R.id.txtviewall1);
         img = v.findViewById(R.id.img1);
-        mviewall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                replaceFragment4(new TeacherClassFragment1());
-            }
-        });
+
         mviewall1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent main = new Intent(Login.this, MainActivity.class);
                 startActivity(main);
+                finish();
             }
         });
         register.setOnClickListener(new View.OnClickListener() {

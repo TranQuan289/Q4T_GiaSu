@@ -115,7 +115,7 @@ public class Fragment_home extends Fragment {
     private void replaceFragment4(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         //transaction.replace(R.id.rcv_user1,fragment);
-        transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
+        transaction.replace(R.id.main,fragment).commit();
     }
 
     private List<Photo> getListPhoto(){

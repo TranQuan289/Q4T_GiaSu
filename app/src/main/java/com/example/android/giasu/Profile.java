@@ -33,6 +33,6 @@ public class Profile extends Fragment {
     }
     private void replaceFragment4(Fragment fragment){
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
+        transaction.replace(R.id.main,fragment).commit();
     }
 }

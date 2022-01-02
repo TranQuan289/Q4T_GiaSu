@@ -23,8 +23,9 @@ public class Intro extends AppCompatActivity {
         engine.setOnRightOutListener(new PaperOnboardingOnRightOutListener() {
             @Override
             public void onRightOut() {
-                Intent login = new Intent(Intro.this, Login.class);
+                Intent login = new Intent(Intro.this, SplashActivity.class);
                 startActivity(login);
+                finish();
             }
         });
     }

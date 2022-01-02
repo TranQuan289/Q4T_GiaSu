@@ -32,10 +32,10 @@
             android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Intro"
             android:exported="true" />
         <activity
-            android:name=".Intro"
+            android:name=".SplashActivity"
             android:enabled="true"
             android:exported="true">
         <intent-filter>

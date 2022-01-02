@@ -35,9 +35,6 @@
             android:name=".SplashActivity"
             android:exported="true" />
         <activity
-            android:name=".ForgotPass"
-            android:exported="true" />
-        <activity
             android:name=".Intro"
             android:enabled="true"
             android:exported="true">

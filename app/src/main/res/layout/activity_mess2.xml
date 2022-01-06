@@ -114,17 +114,6 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:layout_width="20dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_microphone"
-        app:layout_constraintBottom_toBottomOf="@+id/editText12"
-        app:layout_constraintEnd_toEndOf="@+id/editText12"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toStartOf="@+id/editText12"
-        app:layout_constraintTop_toTopOf="@+id/editText12"
-        app:layout_constraintVertical_bias="0.65" />
-
-    <ImageButton
         android:layout_width="35dp"
         android:layout_height="35dp"
         app:layout_constraintHorizontal_bias="0.4"

@@ -23,7 +23,6 @@ public class CreateAdapter extends FragmentStateAdapter {
                 return null;
         }
     }
-
     @Override
     public int getItemCount() {
         return 2;

@@ -167,6 +167,8 @@
         <entry key="..\:/android/GiaSu/app/src/main/res/menu/menu_bottom.xml" value="0.3333333333333333" />
         <entry key="..\:/android/GiaSu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2128205128205128" />
         <entry key="..\:/android/GiaSu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2128205128205128" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/btn_circle.xml" value="0.20092592592592592" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/btn_circle1.xml" value="0.20092592592592592" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/dialog.xml" value="0.21614583333333334" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/dialog_header.xml" value="0.20092592592592592" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/ic_backk.xml" value="0.11041666666666666" />
@@ -184,6 +186,7 @@
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_teacherlist.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_teacheruser.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/main_activity.xml" value="0.1503623188405797" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/menu/menu_bottom.xml" value="0.2" />
       </map>
     </option>
   </component>

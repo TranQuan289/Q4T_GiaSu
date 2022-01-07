@@ -75,7 +75,7 @@
             android:layout_marginStart="25dp"
             android:layout_toEndOf="@+id/imageView6"
             android:fontFamily="sans-serif"
-            android:text="Quảng lý thông tin"
+            android:text="Quản lý thông tin"
             android:textColor="#ffffff"
             android:textSize="17sp" />
 

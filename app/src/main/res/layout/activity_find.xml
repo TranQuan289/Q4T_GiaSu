@@ -94,34 +94,34 @@
         app:layout_constraintTop_toBottomOf="@+id/editText6"
         app:layout_constraintVertical_bias="0.0" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4">
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioGroup"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editText4">-->
 
-        <RadioButton
-            android:id="@+id/rb1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:backgroundTint="@color/white"
-            android:buttonTint="#1492E6"
-            android:text="Gia sư" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/rb1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:buttonTint="#1492E6"-->
+<!--            android:text="Gia sư" />-->
 
-        <RadioButton
-            android:id="@+id/rb2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="155dp"
-            android:backgroundTint="@color/white"
-            android:buttonTint="#1492E6"
-            android:text="Người dùng" />
-    </RadioGroup>
+<!--        <RadioButton-->
+<!--            android:id="@+id/rb2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="155dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:buttonTint="#1492E6"-->
+<!--            android:text="Người dùng" />-->
+<!--    </RadioGroup>-->
 
     <Button
         android:id="@+id/button"

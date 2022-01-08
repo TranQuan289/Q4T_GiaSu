@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#172738"
+    tools:context="com.example.android.giasu.Profile"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -295,7 +296,9 @@
                 android:layout_below="@+id/hinhthuc"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="18dp"
-                android:text="Onlien"
+                android:text="Online"
+                android:checked="true"
+                android:enabled="false"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
 
@@ -306,6 +309,8 @@
                 android:layout_below="@+id/hinhthuc"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="18dp"
+                android:checked="true"
+                android:enabled="false"
                 android:layout_toRightOf="@+id/checkbox1"
                 android:text="Tại nhà"
                 android:textColor="@color/white"
@@ -508,7 +513,7 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/traodoi"
+                android:id="@+id/btn_contact"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:backgroundTint="#35A1E9"

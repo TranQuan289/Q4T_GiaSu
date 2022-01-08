@@ -13,18 +13,21 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.android.classlist.Fragment_manage;
 import com.example.android.teacheruser.TeacherUser2;
 
 public class Fragment_profile extends Fragment {
-    TextView logout,profile;
+    TextView logout, profile,txt_manage;
     RelativeLayout relativeLayout;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_profile,container,false);
-        logout=(TextView) v.findViewById(R.id.textlogout);
-        profile=(TextView) v.findViewById(R.id.txtProfile);
-        relativeLayout=(RelativeLayout) v.findViewById(R.id.relativeLayout);
+        View v = inflater.inflate(R.layout.activity_profile, container, false);
+        logout = (TextView) v.findViewById(R.id.textlogout);
+        profile = (TextView) v.findViewById(R.id.txtProfile);
+        txt_manage = v.findViewById(R.id.txt_manage);
+        relativeLayout = (RelativeLayout) v.findViewById(R.id.relativeLayout);
 
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,11 +39,16 @@ public class Fragment_profile extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),Login.class);
+                Intent intent = new Intent(getActivity(), Login.class);
                 startActivity(intent);
             }
         });
-
+        txt_manage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                replaceFragment4(new Fragment_manage());
+            }
+        });
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,8 +59,9 @@ public class Fragment_profile extends Fragment {
 
 
     }
-    private void replaceFragment4(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
+
+    private void replaceFragment4(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
 }

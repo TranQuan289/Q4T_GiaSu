@@ -31,9 +31,9 @@ import me.relex.circleindicator.CircleIndicator3;
 
 public class Fragment_home extends Fragment {
     View v;
-    private TextView mviewall,mviewall1;
+    private TextView viewteacherall,viewroomall;
     private ViewPager2 mViewPager2;
-    private ImageView img;
+    private ImageView img_find;
     private CircleIndicator3 mCircleIndicator3;
     private List<Photo> mListPhoto;
     private Handler mHandler = new Handler(Looper.getMainLooper());
@@ -55,22 +55,22 @@ public class Fragment_home extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        v = inflater.inflate(R.layout.activity_home,container,false);
-        mviewall = v.findViewById(R.id.txtviewall);
-        mviewall1 = v.findViewById(R.id.txtviewall1);
-        img = v.findViewById(R.id.img1);
-        mviewall.setOnClickListener(new View.OnClickListener() {
+        viewteacherall = v.findViewById(R.id.txt_viewteacherall);
+        viewroomall = v.findViewById(R.id.txt_viewroomall);
+        img_find = v.findViewById(R.id.img_find);
+        viewteacherall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment4(new TeacherClassFragment1());
             }
         });
-        mviewall1.setOnClickListener(new View.OnClickListener() {
+        viewroomall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment4(new RoomFragment1());
             }
         });
-        img.setOnClickListener(new View.OnClickListener() {
+        img_find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment4(new Fragment_Find());

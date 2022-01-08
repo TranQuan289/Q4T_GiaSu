@@ -172,21 +172,32 @@
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/dialog.xml" value="0.21614583333333334" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/dialog_header.xml" value="0.20092592592592592" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/ic_backk.xml" value="0.11041666666666666" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.20052083333333334" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/drawable/search.xml" value="0.20052083333333334" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_createteacher.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_createuser2.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_createuser3.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_createuser4.xml" value="0.1" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_find.xml" value="0.1431159420289855" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_find1.xml" value="0.1431159420289855" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_list.xml" value="0.1431159420289855" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_mess2.xml" value="0.1503623188405797" />
-        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_profile.xml" value="0.4466666666666667" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_profile1.xml" value="0.2" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/activity_user2.xml" value="0.1" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/dialog_post.xml" value="0.2" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_list.xml" value="0.1503623188405797" />
-        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_list2.xml" value="0.1" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_list2.xml" value="0.16666666666666666" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_list3.xml" value="0.3333333333333333" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_listall.xml" value="0.19635416666666666" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_listroomall.xml" value="0.184375" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/fragment_manage.xml" value="0.184375" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_class.xml" value="0.184375" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_classlist.xml" value="0.184375" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_giasutheothanhpho.xml" value="0.184375" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_mess.xml" value="0.1503623188405797" />
+        <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_post.xml" value="0.184375" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_teacherlist.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/item_teacheruser.xml" value="0.1503623188405797" />
         <entry key="..\:/android/Q4T_GiaSu/app/src/main/res/layout/main_activity.xml" value="0.1503623188405797" />

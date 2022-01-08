@@ -92,14 +92,14 @@
             android:textSize="17sp" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/txt_manage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView10"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="33dp"
             android:fontFamily="sans-serif"
-            android:text="Lịch sử lớp học"
+            android:text="Quản lý bài đăng"
             android:textColor="#ffffff"
             android:textSize="17sp" />
 
@@ -107,7 +107,7 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView11"
+            android:layout_below="@+id/txt_manage"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="33dp"
             android:fontFamily="sans-serif"

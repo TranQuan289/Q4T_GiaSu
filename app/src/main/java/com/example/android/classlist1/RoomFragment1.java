@@ -23,7 +23,7 @@ public class RoomFragment1 extends Fragment {
     View v;
     private RecyclerView rcvRoom1;
     private List<Room1> roomList1;
-    private ImageView img;
+    private ImageView img_back;
 
     public RoomFragment1() {
     }
@@ -33,9 +33,9 @@ public class RoomFragment1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_list2, container, false);
+        v = inflater.inflate(R.layout.fragment_listroomall, container, false);
         rcvRoom1 = v.findViewById(R.id.rcv_user);
-        img = v.findViewById(R.id.img);
+        img_back = v.findViewById(R.id.img_back);
         rcvRoom1.setLayoutManager(new LinearLayoutManager(getContext()));
         rcvRoom1.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         roomList1 = new ArrayList<>();
@@ -52,7 +52,7 @@ public class RoomFragment1 extends Fragment {
         Room1 ob6 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
         roomList1.add(ob6);
         rcvRoom1.setAdapter(new RoomAdapter1(roomList1));
-        img.setOnClickListener(new View.OnClickListener() {
+        img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment4(new Fragment_home());

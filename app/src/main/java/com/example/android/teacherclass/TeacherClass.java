@@ -1,11 +1,11 @@
 package com.example.android.teacherclass;
 
 public class TeacherClass {
-     private int resourceId;
-     private String nameclass;
-     private String name;
-     private String subject;
-     private int local;
+    private int resourceId;
+    private String nameclass;
+    private String name;
+    private String subject;
+    private int local;
 
     public int getResourceId() {
         return resourceId;
@@ -74,6 +74,6 @@ public class TeacherClass {
     }
 
     private String address;
-     private String online;
+    private String online;
 
 }

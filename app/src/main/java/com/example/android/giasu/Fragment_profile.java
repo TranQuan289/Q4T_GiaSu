@@ -13,17 +13,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.android.Register.ChangePassFragment;
 import com.example.android.classlist.Fragment_manage;
 import com.example.android.teacheruser.TeacherUser2;
 
 public class Fragment_profile extends Fragment {
-    TextView logout, profile,txt_manage;
+    TextView logout, profile,txt_manage,txt_changepass;
     RelativeLayout relativeLayout;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_profile, container, false);
+        txt_changepass = v.findViewById(R.id.txt_changepass);
         logout = (TextView) v.findViewById(R.id.textlogout);
         profile = (TextView) v.findViewById(R.id.txtProfile);
         txt_manage = v.findViewById(R.id.txt_manage);
@@ -53,6 +55,12 @@ public class Fragment_profile extends Fragment {
             @Override
             public void onClick(View v) {
                 replaceFragment4(new Profile());
+            }
+        });
+        txt_changepass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment4(new ChangePassFragment());
             }
         });
         return v;

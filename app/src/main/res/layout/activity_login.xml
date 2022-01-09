@@ -68,11 +68,14 @@
     <EditText
         android:id="@+id/edttxtemail"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/box"
         android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -94,21 +97,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.18" />
 
-    <EditText
-        android:id="@+id/edttxtpass"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_pass_layout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/box"
-        android:paddingLeft="20dp"
-        android:password="true"
+        app:hintTextColor="#512DA8"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/txt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:textSize="20dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/forgotpass"
@@ -120,9 +137,9 @@
         app:layout_constraintHorizontal_bias=".99"
         app:layout_constraintVertical_bias=".03"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="@+id/edttxtpass"
+        app:layout_constraintEnd_toEndOf="@+id/txt_pass_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edttxtpass" />
+        app:layout_constraintTop_toBottomOf="@id/txt_pass_layout" />
 
     <Button
         android:id="@+id/btnlogin"
@@ -136,7 +153,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/edttxtpass"
+        app:layout_constraintTop_toBottomOf="@id/txt_pass_layout"
         app:layout_constraintVertical_bias=".5" />
 
     <TextView

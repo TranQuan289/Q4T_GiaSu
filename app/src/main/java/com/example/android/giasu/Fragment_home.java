@@ -31,7 +31,7 @@ import me.relex.circleindicator.CircleIndicator3;
 
 public class Fragment_home extends Fragment {
     View v;
-    private TextView viewteacherall,viewroomall;
+    private TextView viewteacherall, viewroomall;
     private ViewPager2 mViewPager2;
     private ImageView img_find;
     private CircleIndicator3 mCircleIndicator3;
@@ -41,20 +41,21 @@ public class Fragment_home extends Fragment {
         @Override
         public void run() {
             int current = mViewPager2.getCurrentItem();
-            if(current == mListPhoto.size() - 1 ){
+            if (current == mListPhoto.size() - 1) {
                 mViewPager2.setCurrentItem(0);
-            }else {
+            } else {
                 mViewPager2.setCurrentItem(current + 1);
             }
         }
-        };
+    };
+
     public Fragment_home() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       v = inflater.inflate(R.layout.activity_home,container,false);
+        v = inflater.inflate(R.layout.activity_home, container, false);
         viewteacherall = v.findViewById(R.id.txt_viewteacherall);
         viewroomall = v.findViewById(R.id.txt_viewroomall);
         img_find = v.findViewById(R.id.img_find);
@@ -91,34 +92,34 @@ public class Fragment_home extends Fragment {
                 super.onPageSelected(position);
                 mHandler.removeCallbacks(mRunnable);
                 mHandler.postDelayed(mRunnable, 3000);
-            }});
+            }
+        });
 
         return v;
 
     }
-    private void replaceFragment(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.rcv_user1,fragment).commit();
-    //        transaction.replace(R.id.rcv_user3,fragment);
-    }
-    private void replaceFragment2(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        //transaction.replace(R.id.rcv_user1,fragment);
-        transaction.replace(R.id.rcv_user2,fragment).commit();
-        //        transaction.replace(R.id.rcv_user3,fragment);
-    }
-    private void replaceFragment3(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        //transaction.replace(R.id.rcv_user1,fragment);
-        transaction.replace(R.id.rcv_user3,fragment).commit();
-    }
-    private void replaceFragment4(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        //transaction.replace(R.id.rcv_user1,fragment);
-        transaction.replace(R.id.main,fragment).commit();
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.rcv_user1, fragment).commit();
     }
 
-    private List<Photo> getListPhoto(){
+    private void replaceFragment2(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.rcv_user2, fragment).commit();
+    }
+
+    private void replaceFragment3(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.rcv_user3, fragment).commit();
+    }
+
+    private void replaceFragment4(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, fragment).commit();
+    }
+
+    private List<Photo> getListPhoto() {
         List<Photo> list = new ArrayList<>();
         list.add(new Photo(R.drawable.banner1));
         list.add(new Photo(R.drawable.banner2));
@@ -135,7 +136,7 @@ public class Fragment_home extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        mHandler.postDelayed(mRunnable,3000);
+        mHandler.postDelayed(mRunnable, 3000);
     }
 
 }

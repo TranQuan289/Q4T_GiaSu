@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GiaSu">
         <activity
+            android:name="com.example.android.teacherclass.DetailPostFragment"
+            android:exported="true" />
+        <activity
             android:name="com.example.android.Register.ChangePassFragment"
             android:exported="true" />
 

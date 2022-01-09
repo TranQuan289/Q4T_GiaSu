@@ -15,10 +15,17 @@ import java.util.List;
 
 public class ManageAdapter extends RecyclerView.Adapter<ManageAdapter.UserViewHolder> {
     private List<Room> mListRoom;
+    private interfaceListPost interfaceListPost;
 
 
-    public ManageAdapter(List<Room> mListRoom){
+    public void setData(List<Room> mListRoom){
         this.mListRoom = mListRoom;
+        notifyDataSetChanged();
+    }
+
+    public ManageAdapter(List<Room> roomList, interfaceListPost interfaceListPost) {
+        this.mListRoom = roomList;
+        this.interfaceListPost = interfaceListPost;
         notifyDataSetChanged();
     }
 

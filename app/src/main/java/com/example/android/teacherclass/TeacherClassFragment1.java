@@ -24,7 +24,7 @@ public class TeacherClassFragment1 extends Fragment {
     private List<TeacherClass> classList;
     private TeacherClassAdapter userAdapter;
     ImageView img_back;
-    public TeacherClassFragment1(){
+    public  TeacherClassFragment1(){
     };
 
     @Nullable
@@ -47,7 +47,7 @@ public class TeacherClassFragment1 extends Fragment {
                 replaceFragment4(new Fragment_home());
             }
         });
-        userAdapter.setData(getmListTeacher());
+        userAdapter.setData(getListTeacher());
         rcvlist.setAdapter(userAdapter);
         return v;
     }
@@ -56,7 +56,7 @@ public class TeacherClassFragment1 extends Fragment {
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
     }
-    private List<TeacherClass> getmListTeacher(){
+    private List<TeacherClass> getListTeacher(){
         List<TeacherClass> list = new ArrayList<>();
         list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
         list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));

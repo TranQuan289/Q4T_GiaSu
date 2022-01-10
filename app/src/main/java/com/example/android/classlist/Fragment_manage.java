@@ -23,7 +23,7 @@ import java.util.List;
 public class Fragment_manage extends Fragment {
     private RecyclerView rcvRoom;
     private List<Room> roomList;
-    private ManageAdapter postAdapter;
+    private ManageAdapter roomAdapter;
 
     public Fragment_manage() {
     }
@@ -36,7 +36,7 @@ public class Fragment_manage extends Fragment {
         View v = inflater.inflate(R.layout.fragment_manage, container, false);
         ImageView img_back = v.findViewById(R.id.img_back);
         rcvRoom = v.findViewById(R.id.rcv_users);
-        postAdapter = new ManageAdapter(roomList, new interfaceListPost() {
+        roomAdapter = new ManageAdapter(roomList, new interfaceListPost() {
             @Override
             public void onItemClick(Room room) {
                 replaceFragment4(new DetailPostFragment());
@@ -44,8 +44,8 @@ public class Fragment_manage extends Fragment {
         });
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext()));
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        postAdapter.setData(getListRoom());
-        rcvRoom.setAdapter(postAdapter);
+        roomAdapter.setData(getListRoom());
+        rcvRoom.setAdapter(roomAdapter);
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

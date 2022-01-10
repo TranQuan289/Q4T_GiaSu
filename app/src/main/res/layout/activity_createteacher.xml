@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="MÔN HỌC"
+        android:text="LỚP HỌC"
         android:textColor="#707070"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
         android:id="@+id/txtLopHoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LỚP HỌC"
+        android:text="MÔN HỌC"
         android:layout_marginTop="20dp"
         android:textColor="#707070"
         android:textStyle="bold"
@@ -233,11 +233,11 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
 
     <TextView
-        android:id="@+id/txt_gioitinh"
+        android:id="@+id/txt_hP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="GIỚI TÍNH GIA SƯ"
+        android:text="HỌC PHÍ"
         android:textColor="#707070"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -252,12 +252,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
-        android:text="Nam"
+        android:text="30K/1H"
         android:background="@drawable/box_taotindang"
         android:textColor="@color/black"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gioitinh" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_hP" />
 
     <Button
         android:id="@+id/button15"
@@ -265,7 +265,7 @@
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
         android:backgroundTint="@color/white"
-        android:text="Nữ"
+        android:text="60K/1H"
         android:background="@drawable/box_taotindang"
         android:textSize="8sp"
         android:textColor="@color/black"
@@ -279,25 +279,24 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
-        android:text="Khác"
+        android:text="THỎA THUẬN"
         android:background="@drawable/box_taotindang"
         android:textColor="@color/black"
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toEndOf="@+id/button15"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gioitinh" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_hP" />
 
     <TextView
-        android:id="@+id/txt_doituong"
+        android:id="@+id/txt_dC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
-        android:text="ĐỐI TƯỢNG GIA SƯ"
+        android:text="ĐỊA CHỈ"
         android:textColor="#707070"
         android:textStyle="bold"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
@@ -308,12 +307,12 @@
         android:layout_marginStart="33dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
-        android:text="Sinh viên"
+        android:text="HẢI CHÂU"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:background="@drawable/box_taotindang"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_doituong" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
 
     <Button
         android:id="@+id/btn_GV"
@@ -322,12 +321,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
-        android:text="Giáo viên"
+        android:text="CẨM LỆ"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:background="@drawable/box_taotindang"
         app:layout_constraintStart_toEndOf="@+id/btn_sinhvien"
-        app:layout_constraintTop_toBottomOf="@+id/txt_doituong" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
 
     <Button
         android:id="@+id/btn_Gstudo"
@@ -336,14 +335,14 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
-        android:text="Gia sư tự do"
+        android:text="KHÁC"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:background="@drawable/box_taotindang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toEndOf="@+id/btn_GV"
-        app:layout_constraintTop_toBottomOf="@+id/txt_doituong" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
 
     <TextView
         android:id="@+id/txt_htday"

@@ -24,12 +24,16 @@ public class Fragment_manage extends Fragment {
     private RecyclerView rcvRoom;
     private List<Room> roomList;
     private ManageAdapter postAdapter;
+
     public Fragment_manage() {
-    };
+    }
+
+    ;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_manage,container,false);
+        View v = inflater.inflate(R.layout.fragment_manage, container, false);
         ImageView img_back = v.findViewById(R.id.img_back);
         rcvRoom = v.findViewById(R.id.rcv_users);
         postAdapter = new ManageAdapter(roomList, new interfaceListPost() {
@@ -39,7 +43,7 @@ public class Fragment_manage extends Fragment {
             }
         });
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext()));
-        rcvRoom.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+        rcvRoom.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         postAdapter.setData(getListRoom());
         rcvRoom.setAdapter(postAdapter);
         img_back.setOnClickListener(new View.OnClickListener() {
@@ -50,21 +54,23 @@ public class Fragment_manage extends Fragment {
         });
         return v;
     }
-    private void replaceFragment4(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
+
+    private void replaceFragment4(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
-    private List<Room> getListRoom(){
+
+    private List<Room> getListRoom() {
         List<Room> list = new ArrayList<>();
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8","Môn : Toán Học","Học phí : 30k/1h", R.drawable.ic_local,"Hải Châu, Đà Nẵng","Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
+        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
         return list;
     }
 }

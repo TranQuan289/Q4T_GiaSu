@@ -2,7 +2,6 @@ package com.example.android.giasu;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +53,7 @@ public class Login extends AppCompatActivity {
                         public void onResponse(Call<List<Account>> call, Response<List<Account>> response) {
                             ArrayList<Account> accountsList= (ArrayList<Account>) response.body();
                             if(accountsList.size()>0){
+                                Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                                 Intent login = new Intent(Login.this, MainActivity.class);
                                 Bundle bundle=new Bundle();
                                 bundle.putSerializable("account",accountsList);

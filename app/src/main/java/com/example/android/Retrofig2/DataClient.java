@@ -1,5 +1,7 @@
 package com.example.android.Retrofig2;
 
+import androidx.annotation.FractionRes;
+
 import com.example.android.Account;
 
 import java.util.List;
@@ -13,4 +15,16 @@ public interface DataClient {
     @FormUrlEncoded
     @POST("login.php")
     Call<List<Account>> Logindata(@Field("email") String email, @Field("pass") String pass);
+
+    @FormUrlEncoded
+    @POST("register.php")
+    Call<String> Register(@Field("name") String name
+                            ,@Field("email") String email
+                            ,@Field("pass") String pass
+                            ,@Field("address") String address
+                            ,@Field("gender") String gender
+                            ,@Field("phone") String phone
+                            ,@Field("dob") String dob
+                            ,@Field("perr") String perr
+                            ,@Field("level") String level);
 }

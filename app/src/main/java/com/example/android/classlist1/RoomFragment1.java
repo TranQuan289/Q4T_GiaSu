@@ -52,6 +52,7 @@ public class RoomFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 replaceFragment4(new Fragment_home());
+
             }
         });
         return v;

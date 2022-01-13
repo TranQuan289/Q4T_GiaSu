@@ -56,7 +56,9 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                                 Intent login = new Intent(Login.this, MainActivity.class);
                                 Bundle bundle=new Bundle();
-                                bundle.putSerializable("account",accountsList);
+                                bundle.putString("id",accountsList.get(0).getId().toString());
+                                bundle.putString("perr",accountsList.get(0).getPerr().toString());
+                                login.putExtra("account",bundle);
                                 startActivity(login);
                             }
                         }
@@ -66,6 +68,8 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "Tài khoảng không tồn tại", Toast.LENGTH_SHORT).show();
                         }
                     });
+                } else {
+                    Toast.makeText(Login.this, "Bạn chưa nhập đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
             }
         });

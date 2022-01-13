@@ -1,5 +1,6 @@
 package com.example.android.giasu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
         mNavigationView = findViewById(R.id.bottomNavigationView);
+        Intent intent=getIntent();
+        Bundle bundle=intent.getBundleExtra("account");
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main, new Fragment_home()).commit();
 
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_create:
                         fragment = new Fragment_create();
+                        fragment.setArguments(bundle);
                         mCurrentFragment = FRAGMENT_CREATE;
                         break;
                     case R.id.action_proflie:

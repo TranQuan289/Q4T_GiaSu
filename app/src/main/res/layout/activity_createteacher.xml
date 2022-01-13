@@ -9,426 +9,375 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <EditText
-        android:id="@+id/menu"
-        android:layout_width="157dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLopHoc" />
+        <Spinner
+            android:id="@+id/menu"
+            android:layout_width="157dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box_taotindang"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLopHoc" />
 
-    <EditText
-        android:id="@+id/menu1"
-        android:layout_width="157dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
+        <Spinner
+            android:id="@+id/menu1"
+            android:layout_width="157dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box_taotindang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.697"
+            app:layout_constraintStart_toEndOf="@+id/menu"
+            app:layout_constraintTop_toBottomOf="@+id/txtMonHoc" />
 
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.697"
-        app:layout_constraintStart_toEndOf="@+id/menu"
-        app:layout_constraintTop_toBottomOf="@+id/txtMonHoc" />
+        <TextView
+            android:id="@+id/txtMonHoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="LỚP HỌC"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtMonHoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="LỚP HỌC"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txtLopHoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MÔN HỌC"
+            android:layout_marginTop="20dp"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtLopHoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MÔN HỌC"
-        android:layout_marginTop="20dp"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txt_buoihoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="SỐ BUỔI HỌC / TUẤN"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu" />
 
-    <TextView
-        android:id="@+id/txt_buoihoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
-        android:text="SỐ BUỔI HỌC / TUẤN"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu" />
-    <Button
-        android:id="@+id/btn_day1"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <Button
-        android:id="@+id/btn_day2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/btn_day1"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="2"
+            app:layout_constraintStart_toEndOf="@+id/btn_day1"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <Button
-        android:id="@+id/btn_day3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/btn_day2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="3"
+            app:layout_constraintStart_toEndOf="@+id/btn_day2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <Button
-        android:id="@+id/btn_day4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="4"
-        app:layout_constraintStart_toEndOf="@+id/btn_day3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day4"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="4"
+            app:layout_constraintStart_toEndOf="@+id/btn_day3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <Button
-        android:id="@+id/btn_day5"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="5"
-        app:layout_constraintStart_toEndOf="@+id/btn_day4"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@+id/btn_day4"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <Button
-        android:id="@+id/btn_day6"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="6"
-        app:layout_constraintStart_toEndOf="@+id/btn_day5"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day6"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@+id/btn_day5"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <Button
-        android:id="@+id/btn_day7"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_circle"
-        android:text="7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_day6"
-        app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
+        <Button
+            android:id="@+id/btn_day7"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_circle"
+            android:text="7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_day6"
+            app:layout_constraintTop_toBottomOf="@+id/txt_buoihoc" />
 
-    <TextView
-        android:id="@+id/txt_gio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="SỐ  GIỜ/BUỔI"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_day1" />
+        <TextView
+            android:id="@+id/txt_gio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="SỐ  GIỜ/BUỔI"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_day1" />
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="64dp"
-        android:background="@drawable/box_taotindang"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/white"
-        android:text="1 giờ"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="64dp"
+            android:background="@drawable/box_taotindang"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="1 giờ"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/box_taotindang"
-        android:backgroundTint="@color/white"
-        android:text="1.5 giờ"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="64dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/box_taotindang"
+            android:text="1.5 giờ"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/button13"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/white"
-        android:text="2 giờ"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="64dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="2 giờ"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:background="@drawable/box_taotindang"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/white"
-        android:text="2.5 giờ"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="64dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="2.5 giờ"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:background="@drawable/box_taotindang"
+            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/white"
-        android:text="> 3 giờ"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="64dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="> 3 giờ"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:background="@drawable/box_taotindang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gio" />
 
-    <TextView
-        android:id="@+id/txt_hP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="HỌC PHÍ"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
+        <TextView
+            android:id="@+id/txt_hP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="HỌC PHÍ"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button13" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="30K/1H"
-        android:background="@drawable/box_taotindang"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hP" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="30K/1H"
+            android:background="@drawable/box_taotindang"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hP" />
 
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="18dp"
-        android:backgroundTint="@color/white"
-        android:text="60K/1H"
-        android:background="@drawable/box_taotindang"
-        android:textSize="8sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6" />
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="18dp"
+            android:backgroundTint="@color/white"
+            android:text="60K/1H"
+            android:background="@drawable/box_taotindang"
+            android:textSize="8sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/button6"
+            app:layout_constraintTop_toTopOf="@+id/button6" />
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="THỎA THUẬN"
-        android:background="@drawable/box_taotindang"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toEndOf="@+id/button15"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hP" />
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box_taotindang"
+            android:backgroundTint="@color/white"
+            android:text="THỎA THUẬN"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toEndOf="@+id/button15"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hP" />
 
-    <TextView
-        android:id="@+id/txt_dC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:text="ĐỊA CHỈ"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        <TextView
+            android:id="@+id/txt_dC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="ĐỊA CHỈ"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
 
-    <Button
-        android:id="@+id/btn_sinhvien"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="HẢI CHÂU"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
+        <EditText
+            android:id="@+id/edtaddress"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box"
+            android:backgroundTint="@color/white"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginLeft="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
 
-    <Button
-        android:id="@+id/btn_GV"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="CẨM LỆ"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintStart_toEndOf="@+id/btn_sinhvien"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
 
-    <Button
-        android:id="@+id/btn_Gstudo"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="KHÁC"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toEndOf="@+id/btn_GV"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dC" />
+        <TextView
+            android:id="@+id/txt_htday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="HÌNH THỨC HỌC"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtaddress" />
 
-    <TextView
-        android:id="@+id/txt_htday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:text="HÌNH THỨC HỌC"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sinhvien" />
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="160dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box_taotindang"
+            android:backgroundTint="@color/white"
+            android:text="online"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_htday" />
 
-    <Button
-        android:id="@+id/button16"
-        android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="Dạy kèm tại nhà"
-        android:background="@drawable/box_taotindang"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_htday" />
+        <Button
+            android:id="@+id/btn_online"
+            android:layout_width="160dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/white"
+            android:text="offline"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:background="@drawable/box_taotindang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button16"
+            app:layout_constraintTop_toBottomOf="@+id/txt_htday" />
 
-    <Button
-        android:id="@+id/btn_online"
-        android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/white"
-        android:text="Dạy kèm online"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:background="@drawable/box_taotindang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button16"
-        app:layout_constraintTop_toBottomOf="@+id/txt_htday" />
-
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="300dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_0"
-        android:text="TIẾP THEO"
-        android:textSize="20dp"
-        android:layout_marginBottom="200dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button16" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="300dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_0"
+            android:text="Đăng bài"
+            android:textSize="20dp"
+            android:layout_marginBottom="200dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button16" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="16dp"
             android:background="#142433"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.539"
+            app:layout_constraintHorizontal_bias="0.546"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_next" />
 
-        <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@drawable/ic_expand_more_24"
-        app:layout_constraintBottom_toBottomOf="@+id/menu"
-        app:layout_constraintEnd_toEndOf="@+id/menu"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="@+id/menu"
-        app:layout_constraintTop_toBottomOf="@+id/txtLopHoc"
-        app:layout_constraintVertical_bias="0.7" />
-    <TextView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@drawable/ic_expand_more_24"
-        app:layout_constraintBottom_toBottomOf="@+id/menu1"
-        app:layout_constraintEnd_toEndOf="@+id/menu1"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="@+id/menu1"
-        app:layout_constraintTop_toTopOf="@+id/menu1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

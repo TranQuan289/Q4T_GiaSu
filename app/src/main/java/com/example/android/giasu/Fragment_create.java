@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,7 +28,10 @@ public class Fragment_create extends Fragment {
         View v = inflater.inflate(R.layout.activity_create,container,false);
 //        tabLayout= v.findViewById(R.id.tab_layout);
 //        viewPager2= v.findViewById(R.id.view_paperr);
-        replaceFragment(new CreateTeacherFragment());
+        Bundle bundle=getArguments();
+        CreateTeacherFragment fragment=new CreateTeacherFragment();
+        fragment.setArguments(bundle);
+        replaceFragment(fragment);
 //        final CreateAdapter adapter=new CreateAdapter(this);
 //        viewPager2.setAdapter(adapter);
 

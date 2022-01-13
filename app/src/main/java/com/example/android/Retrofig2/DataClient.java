@@ -27,4 +27,15 @@ public interface DataClient {
                             ,@Field("dob") String dob
                             ,@Field("perr") String perr
                             ,@Field("level") String level);
+
+    @FormUrlEncoded
+    @POST("post.php")
+    Call<String> post(@Field("id") String id
+                            ,@Field("number") String number
+                            ,@Field("method") String method
+                            ,@Field("hour") String hour
+                            ,@Field("fee") String fee
+                            ,@Field("clas") String clas
+                            ,@Field("mon") String mon
+                            ,@Field("address") String address);
 }

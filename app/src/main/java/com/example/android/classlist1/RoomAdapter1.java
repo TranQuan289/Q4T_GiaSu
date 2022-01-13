@@ -35,12 +35,11 @@ public class RoomAdapter1 extends RecyclerView.Adapter<RoomAdapter1.UserViewHold
             return;
         }
 
-        holder.tvname.setText(room.getNameclass());
-        holder.tvsubject.setText(room.getSubject());
-        holder.tvmoney.setText(room.getMoney());
-        holder.img.setImageResource(room.getResourceId());
-        holder.tvarea.setText(room.getArea());
-        holder.tvonline.setText(room.getOnline());
+        holder.tvname.setText(room.getGrade());
+        holder.tvsubject.setText(room.getName());
+        holder.tvmoney.setText(room.getFee());
+        holder.tvarea.setText(room.getAddress());
+        holder.tvonline.setText(room.getMethod());
     }
 
 
@@ -54,12 +53,10 @@ public class RoomAdapter1 extends RecyclerView.Adapter<RoomAdapter1.UserViewHold
 
     public class UserViewHolder1 extends RecyclerView.ViewHolder{
 
-        private ImageView img;
         private TextView tvname,tvsubject,tvmoney,tvarea,tvonline;
 
         public UserViewHolder1(@NonNull View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.img);
             tvname = itemView.findViewById(R.id.txtnameclass);
             tvsubject = itemView.findViewById(R.id.txtsubject);
             tvmoney = itemView.findViewById(R.id.txtmoney);

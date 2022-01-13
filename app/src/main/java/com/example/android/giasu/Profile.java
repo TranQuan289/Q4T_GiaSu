@@ -18,11 +18,12 @@ import com.example.android.mess.MessFragment2;
 public class Profile extends Fragment {
     Button button;
     ImageView img_back;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_profile1,container,false);
-        button=(Button) v.findViewById(R.id.btn_contact);
+        View v = inflater.inflate(R.layout.activity_profile1, container, false);
+        button = (Button) v.findViewById(R.id.btn_contact);
         img_back = v.findViewById(R.id.img_back);
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,8 +40,9 @@ public class Profile extends Fragment {
 
         return v;
     }
-    private void replaceFragment4(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main,fragment).commit();
+
+    private void replaceFragment4(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, fragment).commit();
     }
 }

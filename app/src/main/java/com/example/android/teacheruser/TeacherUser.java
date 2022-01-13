@@ -1,8 +1,24 @@
 package com.example.android.teacheruser;
 
-public class TeacherUser {
+import com.example.android.spotlightTeacher;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class TeacherUser implements Serializable {
     private int resourceId;
     private String name;
+
+    @Override
+    public String toString() {
+        return "TeacherUser{" +
+                "resourceId=" + resourceId +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    public TeacherUser(int avt, List<spotlightTeacher> accountsList) {
+    }
 
 
     public int getResourceId() {

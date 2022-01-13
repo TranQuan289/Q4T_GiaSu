@@ -13,17 +13,27 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.Retrofig2.APIUtils;
+import com.example.android.Retrofig2.DataClient;
+import com.example.android.classlist.Room;
+import com.example.android.classlist.RoomAdapter;
 import com.example.android.giasu.Fragment_home;
 import com.example.android.giasu.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class RoomFragment1 extends Fragment {
     View v;
     private RecyclerView rcvRoom1;
     private List<Room1> roomList1;
     private ImageView img_back;
+    private RoomAdapter roomAdapter;
+    private Room room;
 
     public RoomFragment1() {
     }
@@ -38,20 +48,6 @@ public class RoomFragment1 extends Fragment {
         img_back = v.findViewById(R.id.img_back);
         rcvRoom1.setLayoutManager(new LinearLayoutManager(getContext()));
         rcvRoom1.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        roomList1 = new ArrayList<>();
-        Room1 ob1 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
-        roomList1.add(ob1);
-        Room1 ob2 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
-        roomList1.add(ob2);
-        Room1 ob3 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
-        roomList1.add(ob3);
-        Room1 ob4 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
-        roomList1.add(ob4);
-        Room1 ob5 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
-        roomList1.add(ob5);
-        Room1 ob6 = new Room1("Lớp : 7", "Môn : Toán", "Học phí : 30k/1h", R.drawable.ic_localblack, "Hải Châu", "Hình thức dạy: online");
-        roomList1.add(ob6);
-        rcvRoom1.setAdapter(new RoomAdapter1(roomList1));
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,5 +60,20 @@ public class RoomFragment1 extends Fragment {
     private void replaceFragment4(Fragment fragment) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
+    }
+    private void getRoomList() {
+        DataClient dataClient = APIUtils.getData();
+        Call<List<Room>> callback = dataClient.getRoomList();
+        callback.enqueue(new Callback<List<Room>>() {
+            @Override
+            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
+                ArrayList<Room> listRoom = (ArrayList<Room>) response.body();
+                roomAdapter = new RoomAdapter(listRoom, room);
+                rcvRoom1.setAdapter(roomAdapter);
+            }
+            @Override
+            public void onFailure(Call<List<Room>> call, Throwable t) {
+            }
+        });
     }
 }

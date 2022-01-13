@@ -18,7 +18,7 @@ import com.example.android.classlist.Fragment_manage;
 import com.example.android.teacheruser.TeacherUser2;
 
 public class Fragment_profile extends Fragment {
-    TextView logout, profile,txt_manage,txt_changepass;
+    TextView logout, profile, txt_manage, txt_changepass;
     RelativeLayout relativeLayout;
 
     @Nullable

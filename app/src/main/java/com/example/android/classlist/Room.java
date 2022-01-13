@@ -1,69 +1,70 @@
 package com.example.android.classlist;
 
-public class Room {
-    private String nameclass;
-    private String subject;
-    private String money;
-    private int resourceId;
-    private String area;
+import java.io.Serializable;
 
-    public String getNameclass() {
-        return nameclass;
+public class Room implements Serializable {
+    private String grade;
+    private String name;
+    private String fee;
+    private String address;
+    private String method;
+
+    public Room(String grade, String name, String fee, String address, String method) {
+        this.grade = grade;
+        this.name = name;
+        this.fee = fee;
+        this.address = address;
+        this.method = method;
     }
 
-    public void setNameclass(String nameclass) {
-        this.nameclass = nameclass;
+    public String getGrade() {
+        return grade;
     }
 
-    public String getSubject() {
-        return subject;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public String getName() {
+        return name;
     }
 
-    public String getMoney() {
-        return money;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setMoney(String money) {
-        this.money = money;
+    public String getFee() {
+        return fee;
     }
 
-    public int getResourceId() {
-        return resourceId;
+    public void setFee(String fee) {
+        this.fee = fee;
     }
 
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    public String getAddress() {
+        return address;
     }
 
-    public String getArea() {
-        return area;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setArea(String area) {
-        this.area = area;
+    public String getMethod() {
+        return method;
     }
 
-    public String getOnline() {
-        return online;
+    public void setMethod(String method) {
+        this.method = method;
     }
 
-    public void setOnline(String online) {
-        this.online = online;
+    @Override
+    public String toString() {
+        return "Room{" +
+                "grade='" + grade + '\'' +
+                ", name='" + name + '\'' +
+                ", fee='" + fee + '\'' +
+                ", address='" + address + '\'' +
+                ", method='" + method + '\'' +
+                '}';
     }
-
-    public Room(String nameclass, String subject, String money, int resourceId, String area, String online) {
-        this.nameclass = nameclass;
-        this.subject = subject;
-        this.money = money;
-        this.resourceId = resourceId;
-        this.area = area;
-        this.online = online;
-    }
-
-    private String online;
-
 }

@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
+import com.example.android.spotlightTeacher;
 
 import java.util.List;
 
@@ -18,10 +19,11 @@ public class TeacherUserAdapter extends RecyclerView.Adapter<TeacherUserAdapter.
 
     private  List<TeacherUser> mListUser;
     private RecyclerViewClickInterface clickInterface;
+    private spotlightTeacher teacher;
 
-    public TeacherUserAdapter(List<TeacherUser> mListUser,RecyclerViewClickInterface clickInterface ){
+    public TeacherUserAdapter(List<TeacherUser> mListUser,spotlightTeacher teacher ){
         this.mListUser = mListUser;
-        this.clickInterface = clickInterface;
+        this.teacher = teacher;
         notifyDataSetChanged();
     }
     public void setData(List<TeacherUser> mListUser){

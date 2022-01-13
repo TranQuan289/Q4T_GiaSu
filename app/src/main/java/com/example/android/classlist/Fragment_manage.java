@@ -62,15 +62,6 @@ public class Fragment_manage extends Fragment {
 
     private List<Room> getListRoom() {
         List<Room> list = new ArrayList<>();
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
         return list;
     }
 }

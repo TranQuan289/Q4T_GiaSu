@@ -54,7 +54,7 @@ public class TeacherClassFragment1 extends Fragment {
                 replaceFragment4(new Fragment_home());
             }
         });
-
+        getTeacherClass();
         return v;
     }
 

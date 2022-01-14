@@ -3,7 +3,9 @@ package com.example.android.Retrofig2;
 import androidx.annotation.FractionRes;
 
 import com.example.android.Account;
+import com.example.android.Find.user;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -38,4 +40,8 @@ public interface DataClient {
                             ,@Field("clas") String clas
                             ,@Field("mon") String mon
                             ,@Field("address") String address);
+
+    @FormUrlEncoded
+    @POST("find.php")
+    Call<List<user>> find(@Field("info") String info, @Field("mon") String mon, @Field("lop") String lop);
 }

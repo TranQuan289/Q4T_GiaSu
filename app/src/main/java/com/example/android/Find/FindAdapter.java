@@ -18,7 +18,7 @@ public class FindAdapter extends FragmentStatePagerAdapter {
         String title = "";
         switch (position){
             case 0 :
-                title = "Tìm kiếm Tỉnh, Thành Phố";
+                title = "Tìm kiếm theo từ khóa";
                 break;
             case 1:
                 title = "Tìm kiếm quanh đây";

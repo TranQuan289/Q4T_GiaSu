@@ -44,23 +44,15 @@
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/txtname34"
+            android:id="@+id/txtname3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="20dp"
             android:textColor="@color/white"
             android:layout_marginTop="13dp"
             android:layout_toRightOf="@id/img_avt3"
-            android:text="@string/app_name" />
-            <TextView
-                android:id="@+id/txtname3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="13dp"
-                android:layout_toRightOf="@id/img_avt3"
-                android:text="@string/app_name" />
+            android:text="Họ Tên: "/>
+
         <TextView
             android:id="@+id/txtsubject34"
             android:textColor="@color/white"
@@ -99,6 +91,7 @@
             android:textColor="#0fbe37"
             android:layout_centerVertical="true"
             android:textSize="10dp" />
+
         <TextView
             android:id="@+id/txtonline3"
             android:layout_width="wrap_content"
@@ -107,6 +100,7 @@
             android:layout_centerVertical="true"
             android:text="@string/app_name"
             android:textColor="#0fbe37"
+            android:paddingRight="10dp"
             android:textSize="10dp" />
         <ImageView
             android:id="@+id/img3"

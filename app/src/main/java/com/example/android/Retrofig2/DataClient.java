@@ -5,6 +5,7 @@ import com.example.android.Find.user;
 import com.example.android.classlist.Room;
 import com.example.android.classlist1.Room1;
 import com.example.android.spotlightTeacher;
+import com.example.android.teacherclass.TeacherClass;
 import com.example.android.teacheruser.TeacherUser;
 
 import java.util.ArrayList;
@@ -41,6 +42,8 @@ public interface DataClient {
     Call<List<Room>> getRoomList();
     @GET("roomList.php")
     Call<List<Room1>> getRoomList1();
+    @GET("teacherList.php")
+    Call<List<TeacherClass>> getTeacherClass();
 
     @FormUrlEncoded
     @POST("post.php")

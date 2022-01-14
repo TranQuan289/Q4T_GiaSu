@@ -26,6 +26,11 @@ public class TeacherUserAdapter extends RecyclerView.Adapter<TeacherUserAdapter.
         this.teacher = teacher;
         notifyDataSetChanged();
     }
+    public TeacherUserAdapter(List<TeacherUser> mListUser,RecyclerViewClickInterface clickInterface ){
+        this.mListUser = mListUser;
+        this.clickInterface = clickInterface;
+        notifyDataSetChanged();
+    }
     public void setData(List<TeacherUser> mListUser){
         this.mListUser = mListUser;
         notifyDataSetChanged();

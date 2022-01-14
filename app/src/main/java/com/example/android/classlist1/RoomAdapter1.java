@@ -9,16 +9,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.classlist.Room;
 import com.example.android.giasu.R;
 
 import java.util.List;
 
 public class RoomAdapter1 extends RecyclerView.Adapter<RoomAdapter1.UserViewHolder1> {
     private List<Room1> mListRoom1;
+    private Room1 room1;
 
-
-    public RoomAdapter1(List<Room1> mListRoom1) {
+    public RoomAdapter1(List<Room1> mListRoom1, Room1 room1) {
         this.mListRoom1 = mListRoom1;
+        this.room1 = room1;
         notifyDataSetChanged();
     }
     @NonNull

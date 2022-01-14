@@ -32,8 +32,8 @@ public class RoomFragment1 extends Fragment {
     private RecyclerView rcvRoom1;
     private List<Room1> roomList1;
     private ImageView img_back;
-    private RoomAdapter roomAdapter;
-    private Room room;
+    private RoomAdapter1 roomAdapter1;
+    private Room1 room1;
 
     public RoomFragment1() {
     }
@@ -55,6 +55,7 @@ public class RoomFragment1 extends Fragment {
 
             }
         });
+        getRoomList();
         return v;
     }
 
@@ -64,16 +65,18 @@ public class RoomFragment1 extends Fragment {
     }
     private void getRoomList() {
         DataClient dataClient = APIUtils.getData();
-        Call<List<Room>> callback = dataClient.getRoomList();
-        callback.enqueue(new Callback<List<Room>>() {
+        Call<List<Room1>> callback = dataClient.getRoomList1();
+        callback.enqueue(new Callback<List<Room1>>() {
             @Override
-            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
-                ArrayList<Room> listRoom = (ArrayList<Room>) response.body();
-                roomAdapter = new RoomAdapter(listRoom, room);
-                rcvRoom1.setAdapter(roomAdapter);
+            public void onResponse(Call<List<Room1>> call, Response<List<Room1>> response) {
+                ArrayList<Room1> listRoom1 = (ArrayList<Room1>) response.body();
+                roomAdapter1 = new RoomAdapter1(listRoom1,room1);
+                rcvRoom1.setAdapter(roomAdapter1);
             }
+
             @Override
-            public void onFailure(Call<List<Room>> call, Throwable t) {
+            public void onFailure(Call<List<Room1>> call, Throwable t) {
+
             }
         });
     }

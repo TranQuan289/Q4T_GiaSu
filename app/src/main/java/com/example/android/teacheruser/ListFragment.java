@@ -50,12 +50,12 @@ public class ListFragment extends Fragment {
         rcvUser = v.findViewById(R.id.rcv_user);
         rcvUser.setLayoutManager(new LinearLayoutManager(getContext()));
         rcvUser.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-//        userAdapter = new TeacherUserAdapter(mListUser, new RecyclerViewClickInterface() {
-//            @Override
-//            public void onItemClick(TeacherUser user) {
-//                replaceFragment4(new TeacherUser2());
-//            }
-//        });
+        userAdapter = new TeacherUserAdapter(mListUser, new RecyclerViewClickInterface() {
+            @Override
+            public void onItemClick(TeacherUser user) {
+                replaceFragment4(new TeacherUser2());
+            }
+        });
         getSpotLightList();
         return v;
     }
@@ -64,15 +64,6 @@ public class ListFragment extends Fragment {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
-
-    @NonNull
-    private List<TeacherUser> getListUser(String name) {
-        List<TeacherUser> list = new ArrayList<>();
-        list.add(new TeacherUser(R.drawable.avt, name));
-        list.add(new TeacherUser(R.drawable.avt, name));
-        return list;
-    }
-
     private void getSpotLightList() {
         DataClient dataClient = APIUtils.getData();
         Call<List<TeacherUser>> callback = dataClient.getSpotlightTeacher();

@@ -50,7 +50,7 @@ public class TeacherUserAdapter extends RecyclerView.Adapter<TeacherUserAdapter.
         if(user == null){
             return;
         }
-        holder.imAvatar.setImageResource(user.getResourceId());
+//        holder.imAvatar.setImageResource(user.getResourceId());
         holder.tvname.setText(user.getName());
         holder.imAvatar.setOnClickListener(new View.OnClickListener() {
             @Override

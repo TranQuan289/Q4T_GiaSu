@@ -39,7 +39,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.UserViewHolder
         }
 
         holder.tvname.setText(room.getGrade());
-        holder.tvsubject.setText(room.getName());
+        holder.tvsubject.setText(room.getSubject());
         holder.tvmoney.setText(room.getFee());
         holder.tvarea.setText(room.getAddress());
         holder.tvonline.setText(room.getMethod());

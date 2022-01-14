@@ -6,27 +6,13 @@ import java.io.Serializable;
 import java.util.List;
 
 public class TeacherUser implements Serializable {
-    private int resourceId;
     private String name;
 
     @Override
     public String toString() {
         return "TeacherUser{" +
-                "resourceId=" + resourceId +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 '}';
-    }
-
-    public TeacherUser(int avt, List<spotlightTeacher> accountsList) {
-    }
-
-
-    public int getResourceId() {
-        return resourceId;
-    }
-
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
     }
 
     public String getName() {
@@ -37,8 +23,7 @@ public class TeacherUser implements Serializable {
         this.name = name;
     }
 
-    public TeacherUser(int resourceId, String name) {
-        this.resourceId = resourceId;
+    public TeacherUser(String name) {
         this.name = name;
     }
 }

@@ -4,17 +4,20 @@ import java.io.Serializable;
 
 public class Room implements Serializable {
     private String grade;
-    private String name;
+    private String subject;
     private String fee;
     private String address;
     private String method;
 
-    public Room(String grade, String name, String fee, String address, String method) {
-        this.grade = grade;
-        this.name = name;
-        this.fee = fee;
-        this.address = address;
-        this.method = method;
+    @Override
+    public String toString() {
+        return "Room{" +
+                "grade='" + grade + '\'' +
+                ", subject='" + subject + '\'' +
+                ", fee='" + fee + '\'' +
+                ", address='" + address + '\'' +
+                ", method='" + method + '\'' +
+                '}';
     }
 
     public String getGrade() {
@@ -25,12 +28,12 @@ public class Room implements Serializable {
         this.grade = grade;
     }
 
-    public String getName() {
-        return name;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getFee() {
@@ -57,14 +60,11 @@ public class Room implements Serializable {
         this.method = method;
     }
 
-    @Override
-    public String toString() {
-        return "Room{" +
-                "grade='" + grade + '\'' +
-                ", name='" + name + '\'' +
-                ", fee='" + fee + '\'' +
-                ", address='" + address + '\'' +
-                ", method='" + method + '\'' +
-                '}';
+    public Room(String grade, String subject, String fee, String address, String method) {
+        this.grade = grade;
+        this.subject = subject;
+        this.fee = fee;
+        this.address = address;
+        this.method = method;
     }
 }

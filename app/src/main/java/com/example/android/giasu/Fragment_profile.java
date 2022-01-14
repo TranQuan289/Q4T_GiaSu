@@ -48,13 +48,14 @@ public class Fragment_profile extends Fragment {
         txt_manage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 replaceFragment4(new Fragment_manage());
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment4(new Profile());
+                replaceFragment4(new profile_user());
             }
         });
         txt_changepass.setOnClickListener(new View.OnClickListener() {

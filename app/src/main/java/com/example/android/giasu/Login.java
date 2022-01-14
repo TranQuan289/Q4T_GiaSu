@@ -14,6 +14,7 @@ import com.example.android.Account;
 import com.example.android.Register.Register;
 import com.example.android.Retrofig2.APIUtils;
 import com.example.android.Retrofig2.DataClient;
+import com.example.android.profile_static;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class Login extends AppCompatActivity {
     Button btnlogin;
     EditText edtemail,edtpass;
     String email,pass;
+    ArrayList<Account> accountArrayList  ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +54,36 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<List<Account>> call, Response<List<Account>> response) {
                             ArrayList<Account> accountsList= (ArrayList<Account>) response.body();
+
+//txtName.setText(accountsList.get(0).getName().trim());
+//                        txtcv.setText(accountsList.get(0).getPerr());
+//                        if(txtcv.getText().toString().equals("0"))
+//                            txtcv.setText("Gia Sư");
+//                        else
+//                            txtcv.setText("Học Sinh");
+//                        phone.setText(accountsList.get(0).getPhone());
+//                        gioi.setText(accountsList.get(0).getGender());
+//                        if(gioi.getText().toString().equals("0"))
+//                            gioi.setText("Nam");
+//                        else
+//                            gioi.setText("Nữ");
+//                        address.setText(accountsList.get(0).getAddress());
+//                        td.setText(accountsList.get(0).getPerr());
+//                        date.setText(accountsList.get(0).getDob());
+
                             if(accountsList.size()>0){
                                 Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                               // register.setText(accountsList.get(0).getName());
+                                profile_static.setName(accountsList.get(0).getName());
+                                profile_static.setPerr(accountsList.get(0).getPerr());
+                                profile_static.setPhone(accountsList.get(0).getPhone());
+                                profile_static.setGender(accountsList.get(0).getGender());
+                                profile_static.setAddress(accountsList.get(0).getAddress());
+                                profile_static.setPerr(accountsList.get(0).getPerr());
+                                profile_static.setDob(accountsList.get(0).getDob());
+                                profile_static.setImage(accountsList.get(0).getImage());
+                                profile_static.setId(accountsList.get(0).getId());
+
                                 Intent login = new Intent(Login.this, MainActivity.class);
                                 Bundle bundle=new Bundle();
                                 bundle.putSerializable("account",accountsList);

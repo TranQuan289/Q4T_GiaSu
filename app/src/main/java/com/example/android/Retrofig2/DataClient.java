@@ -27,4 +27,21 @@ public interface DataClient {
                             ,@Field("dob") String dob
                             ,@Field("perr") String perr
                             ,@Field("level") String level);
+
+    @FormUrlEncoded
+    @POST("profile.php")
+    Call<List<Account>> profile(@Field("id") String id);
+
+    @FormUrlEncoded
+    @POST("update_profile.php")
+    Call<String> update_profilr(@Field("name") String name
+
+            ,@Field("perr") String perr
+            ,@Field("phone") String phone
+            ,@Field("gender") String gender
+            ,@Field("address") String address
+            ,@Field("id") String id
+            ,@Field("dob") String dob);
+
+
 }

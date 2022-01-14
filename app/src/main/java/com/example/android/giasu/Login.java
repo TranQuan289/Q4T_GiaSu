@@ -49,27 +49,11 @@ public class Login extends AppCompatActivity {
                 pass=edtpass.getText().toString().trim();
                 if(email.length()>0 && pass.length()>0){
                     DataClient dataClient= APIUtils.getData();
-                    Call<List<Account>> callback=dataClient.Logindata(email,pass);
+                    Call<List<Account>> callback=dataClient.Logindata("thinh@gmail.com","123");
                     callback.enqueue(new Callback<List<Account>>() {
                         @Override
                         public void onResponse(Call<List<Account>> call, Response<List<Account>> response) {
                             ArrayList<Account> accountsList= (ArrayList<Account>) response.body();
-
-//txtName.setText(accountsList.get(0).getName().trim());
-//                        txtcv.setText(accountsList.get(0).getPerr());
-//                        if(txtcv.getText().toString().equals("0"))
-//                            txtcv.setText("Gia Sư");
-//                        else
-//                            txtcv.setText("Học Sinh");
-//                        phone.setText(accountsList.get(0).getPhone());
-//                        gioi.setText(accountsList.get(0).getGender());
-//                        if(gioi.getText().toString().equals("0"))
-//                            gioi.setText("Nam");
-//                        else
-//                            gioi.setText("Nữ");
-//                        address.setText(accountsList.get(0).getAddress());
-//                        td.setText(accountsList.get(0).getPerr());
-//                        date.setText(accountsList.get(0).getDob());
 
                             if(accountsList.size()>0){
                                 Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();

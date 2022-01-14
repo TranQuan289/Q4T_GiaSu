@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class profile_user extends Fragment {
 
-    TextView upload,txtName,txtcv,phone,gioi,address,td,date;
+    TextView upload,txtName,txtcv,phone,gioi,address,td,date,upload1,ic_class,class1;
     String url="http://192.168.1.7:8080/appGS/proflie.php";
     String id="3";
     @Nullable
@@ -39,8 +39,11 @@ public class profile_user extends Fragment {
         phone = v.findViewById(R.id.phone);
         gioi= v.findViewById(R.id.gioi);
         address= v.findViewById(R.id.address);
-        td = v.findViewById(R.id.td);
+        td = v.findViewById(R.id.level);
         date = v.findViewById(R.id.date);
+        upload1=v.findViewById(R.id.upload2);
+        ic_class =v.findViewById(R.id.ic_class);
+        class1=v.findViewById(R.id.class1);
 
         txtName.setText(profile_static.getName());
         txtcv.setText(profile_static.getPerr());
@@ -50,6 +53,14 @@ public class profile_user extends Fragment {
         td.setText(profile_static.getPerr());
         date.setText(profile_static.getDob());
 
+
+        String i =td.getText().toString().trim();
+
+        if(i.equals("1"))
+        {
+            ic_class.setCursorVisible(false);
+            class1.setCursorVisible(false);
+        }
 
 
         if(txtcv.getText().toString().equals("0"))
@@ -67,7 +78,12 @@ public class profile_user extends Fragment {
                 replaceFragment4(new update_profile());
             }
         });
-
+        upload1.setOnClickListener(new View.OnClickListener() {
+             @Override
+            public void onClick(View view) {
+                 replaceFragment4(new update_profile());
+            }
+        });
        //txtName.setText(profile.pro.getName());
 //        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
 //        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -136,7 +152,7 @@ public class profile_user extends Fragment {
 //            }
 //
 //            });
-String i;
+
 
 //            DataClient dataClient= APIUtils.getData();
 //            Call<List<Account>> callback=dataClient.profile("3");

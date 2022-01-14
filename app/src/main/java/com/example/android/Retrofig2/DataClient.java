@@ -43,5 +43,14 @@ public interface DataClient {
             ,@Field("id") String id
             ,@Field("dob") String dob);
 
+    @FormUrlEncoded
+    @POST("change_pass.php")
+    Call<String> change_pass (@Field("id") String id
+
+            ,@Field("pass") String pass
+            ,@Field("pass_old") String pass_old);
+
+
+
 
 }

@@ -79,7 +79,7 @@
         <RelativeLayout
             android:id="@+id/R_ttcn"
             android:layout_width="match_parent"
-            android:layout_height="520dp"
+            android:layout_height="600dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15"
@@ -99,9 +99,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="15dp"
-                android:text="Thông tin cá nhân"
+                android:text="Thông tin liên hệ"
                 android:textColor="#FFFF00"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/upload"
@@ -109,6 +109,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="330dp"
                 android:layout_marginTop="20dp"
+                android:text="Cập nhật>>"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/upload2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="40dp"
                 android:text="Cập nhật>>"
                 android:textColor="#FFFFFF"
                 android:textSize="15dp" />
@@ -173,40 +184,86 @@
                 android:textColor="@color/white"
                 android:textSize="20dp" />
 
+
             <TextView
-                android:id="@+id/school"
+                android:id="@+id/ic_dob"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/ic_address"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/ic_cake_24" />
+
+            <TextView
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ic_address"
+                android:layout_below="@id/address"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="37dp"
+                android:text="2020-20-12"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/tutur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="40dp"
+                android:text="Thông tin chi tiết"
+                android:textColor="#FFEB3B"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/school1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/ic_dob"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="23dp"
+                android:background="@drawable/ic_menu_book_24" />
+
+            <TextView
+                android:id="@+id/ic_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/school1"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="23dp"
                 android:background="@drawable/ic_school" />
 
             <TextView
-                android:id="@+id/td"
+                android:id="@+id/level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/address"
+                android:layout_below="@id/tutur"
                 android:layout_marginLeft="100dp"
-                android:layout_marginTop="33dp"
+                android:layout_marginTop="38dp"
                 android:text="Đại học"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
+
             <TextView
+                android:id="@+id/ic_class"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_below="@id/school"
+                android:layout_below="@id/ic_level"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="23dp"
-                android:background="@drawable/birthday_cake1" />
+                android:background="@drawable/ic_class" />
+
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/class1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/td"
+                android:layout_below="@id/level"
                 android:layout_marginLeft="100dp"
-                android:layout_marginTop="33dp"
-                android:text="2020-20-12"
+                android:layout_marginTop="38dp"
+                android:text="Lớp"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
 

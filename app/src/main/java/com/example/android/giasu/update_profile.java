@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.android.Account;
@@ -31,6 +32,8 @@ public class update_profile extends Fragment {
 
     EditText txtname,txtgender,txtaddress,txtdob,txtperr,txtphone ;
     Button btn_up;
+    String id="1";
+    ImageView img_back;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,6 +45,14 @@ public class update_profile extends Fragment {
         txtdob = v.findViewById(R.id.txtdob);
         txtperr = v.findViewById(R.id.txtpeer);
         txtphone =v.findViewById(R.id.txtphone);
+        img_back=v.findViewById(R.id.img_back);
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                replaceFragment4(new Fragment_profile());
+            }
+        });
 
 //        txtname.setText(profile_static.getName());
 //        txtgender.setText(profile_static.getGender());
@@ -51,38 +62,44 @@ public class update_profile extends Fragment {
 //        txtperr.setText(profile_static.getPerr());
 
         btn_up =v.findViewById(R.id.btn_up);
+        if(txtname.getText().toString().equals("") || txtgender.getText().toString().equals("")
+            || txtaddress.getText().toString().equals("") || txtdob.getText().toString().equals("")
+            || txtperr.getText().toString().equals("") || txtphone.getText().toString().equals(""))
+        {
+            Toast.makeText(getContext(), "Chưa nhập đủ thông tin", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            btn_up.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DataClient dataClient = APIUtils.getData();
+                    Call<String> callback = dataClient.update_profilr(
+                            txtname.getText().toString().trim()
+                            , txtperr.getText().toString().trim()
+                            , txtphone.getText().toString().trim()
+                            , txtgender.getText().toString().trim()
+                            , txtaddress.getText().toString().trim()
+                            , id
+                            , txtdob.getText().toString().trim()
 
-        btn_up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DataClient dataClient= APIUtils.getData();
-                Call<String>callback=dataClient.update_profilr(
-                        txtname.getText().toString().trim()
-                        ,txtperr.getText().toString().trim()
-                        ,txtphone.getText().toString().trim()
-                        ,txtgender.getText().toString().trim()
-                        ,txtaddress.getText().toString().trim()
-                        ,"1"
-                        ,txtdob.getText().toString().trim()
+                    );
+                    callback.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            String string = response.body().toString().trim();
+                            if (string != null)
+                                Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
 
-                );
-                callback.enqueue(new Callback<String>() {
-                    @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        String string = response.body().toString().trim();
-                        if(string != null)
-                            Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                        }
 
-                    }
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
 
-                    @Override
-                    public void onFailure(Call<String> call, Throwable t) {
-
-                    }
-                });
-            }
-        });
-
+                        }
+                    });
+                }
+            });
+        }
 
 
 //                enqueue(new Callback<List<Account>>() {

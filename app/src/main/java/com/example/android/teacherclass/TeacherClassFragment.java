@@ -37,8 +37,6 @@ public class TeacherClassFragment extends Fragment {
                 replaceFragment4(new TeacherClass2());
             }
         });
-        userAdapter.setData(getmListTeacher());
-        rcvlist.setAdapter(userAdapter);
         return v;
     }
 
@@ -46,18 +44,5 @@ public class TeacherClassFragment extends Fragment {
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         transaction.replace(R.id.main,fragment);
         transaction.commit();
-    }
-    private List<TeacherClass> getmListTeacher(){
-        List<TeacherClass> list = new ArrayList<>();
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        return list;
     }
 }

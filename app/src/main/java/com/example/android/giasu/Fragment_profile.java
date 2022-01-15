@@ -17,7 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.android.Account;
 import com.example.android.Register.ChangePassFragment;
 import com.example.android.classlist.Fragment_manage;
-import com.example.android.teacheruser.TeacherUser2;
+
 
 import java.util.List;
 
@@ -49,12 +49,7 @@ public class Fragment_profile extends Fragment {
 
         //Toast.makeText(getContext(), accounts.get(0).getName(), Toast.LENGTH_SHORT).show();
 
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                replaceFragment4(new TeacherUser2());
-            }
-        });
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

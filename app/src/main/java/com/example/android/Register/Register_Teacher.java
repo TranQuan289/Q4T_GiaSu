@@ -3,8 +3,11 @@ package com.example.android.Register;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,8 @@ import com.example.android.Retrofig2.RetrofigClient;
 import com.example.android.giasu.Login;
 import com.example.android.giasu.R;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,7 +27,9 @@ import retrofit2.Retrofit;
 
 public class Register_Teacher extends AppCompatActivity {
     Button reg,back;
-    EditText edtphone,edtdob,edtgrnder,edtaddress,edtlevel;
+    Spinner edtlevel;
+    String level;
+    EditText edtphone,edtdob,edtgrnder,edtaddress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +42,7 @@ public class Register_Teacher extends AppCompatActivity {
         edtdob=(EditText) findViewById(R.id.edttxtdate);
         edtgrnder=(EditText) findViewById(R.id.edttxtgender);
         edtaddress=(EditText) findViewById(R.id.edttxtaddress);
-        edtlevel=(EditText) findViewById(R.id.edttxtlevel);
+        edtlevel=(Spinner) findViewById(R.id.edttxtlevel);
 
         Intent intent=getIntent();
         Bundle bundle=intent.getBundleExtra("data");
@@ -46,6 +53,25 @@ public class Register_Teacher extends AppCompatActivity {
         String perr=bundle.getString("perr");
 
 
+        ArrayList<String> levelList=new ArrayList<>();
+        levelList.add("Đại học");
+        levelList.add("Cao đẳng");
+        levelList.add("12/12");
+        ArrayAdapter monhocAdapter=new ArrayAdapter(Register_Teacher.this,R.layout.support_simple_spinner_dropdown_item,levelList);
+        monhocAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        edtlevel.setAdapter(monhocAdapter);
+
+        edtlevel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                level=levelList.get(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +79,7 @@ public class Register_Teacher extends AppCompatActivity {
                 String dob=edtdob.getText().toString().trim();
                 String gender=edtgrnder.getText().toString().trim();
                 String address=edtaddress.getText().toString().trim();
-                String level=edtlevel.getText().toString().trim();
+
 
                 if(! (phone.equals("") || dob.equals("") || gender.equals("") || address.equals("") || level.equals(""))) {
                     DataClient register= APIUtils.getData();
@@ -67,7 +93,7 @@ public class Register_Teacher extends AppCompatActivity {
                                 Intent intent2=new Intent(Register_Teacher.this,Login.class);
                                 startActivity(intent2);
                             } else {
-                                Toast.makeText(Register_Teacher.this, "thất bại "+result, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register_Teacher.this, "thất bại "+result.toString(), Toast.LENGTH_SHORT).show();
                             }
                         }
 

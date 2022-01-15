@@ -151,7 +151,6 @@ public class CreateTeacherFragment extends Fragment {
         btn_day5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn_day5.setBackgroundColor(Color.BLACK);
                 btn_day5.setTextColor(Color.RED);
                 sobuoi=btn_day5.getText().toString();
                 btn_day2.setTextColor(Color.BLACK);
@@ -362,7 +361,7 @@ public class CreateTeacherFragment extends Fragment {
                                 btn_hour5.setTextColor(Color.BLACK);
 
                             } else {
-                                Toast.makeText(getActivity(), "thất bại "+result, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "thất bại"+response.body(), Toast.LENGTH_SHORT).show();
                             }
                         }
 

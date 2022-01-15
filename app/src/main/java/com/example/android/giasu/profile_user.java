@@ -16,6 +16,7 @@ import com.example.android.Account;
 import com.example.android.Retrofig2.APIUtils;
 import com.example.android.Retrofig2.DataClient;
 import com.example.android.profile_static;
+import com.example.android.tutar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +27,10 @@ import retrofit2.Response;
 
 public class profile_user extends Fragment {
 
+    Login login;
     TextView upload,txtName,txtcv,phone,gioi,address,td,date,upload1,ic_class,class1;
     String url="http://192.168.1.7:8080/appGS/proflie.php";
-    String id="3";
+    String id=login.id;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -58,8 +60,29 @@ public class profile_user extends Fragment {
 
         if(i.equals("1"))
         {
-            ic_class.setCursorVisible(false);
-            class1.setCursorVisible(false);
+            ic_class.setVisibility(View.INVISIBLE);
+            class1.setVisibility(View.INVISIBLE);
+
+        }
+        else
+        {
+        DataClient dataClient= APIUtils.getData();
+        Call<List<tutar>> callback=dataClient.get_tutor(id);
+        callback.enqueue(new Callback<List<tutar>>() {
+            @Override
+            public void onResponse(Call<List<tutar>> call, Response<List<tutar>> response) {
+                ArrayList<tutar> accountsList= (ArrayList<tutar>) response.body();
+
+                class1.setText(response.body().get(0).getGrade());
+                td.setText(response.body().get(0).getLevel());
+
+            }
+
+            @Override
+            public void onFailure(Call<List<tutar>> call, Throwable t) {
+
+            }
+        });
         }
 
 
@@ -84,49 +107,7 @@ public class profile_user extends Fragment {
                  replaceFragment4(new update_profile());
             }
         });
-       //txtName.setText(profile.pro.getName());
-//        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-//        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
-//                new com.android.volley.Response.Listener<JSONArray>() {
-//                    @Override
-//                    public void onResponse(JSONArray response) {
-//                        // Toast.makeText(getContext(),response.toString(),Toast.LENGTH_SHORT).show();
-//                        try {
-//                            JSONObject object = response.getJSONObject(0);
-//                            txtName.setText(object.getString("email").toString());
-//                            txtcv.setText(object.getString("perr").toString());
-//                            if(txtcv.getText().toString().equals("0"))
-//                                txtcv.setText("Gia Sư");
-//                            else
-//                                gioi.setText("Học Sinh");
-//                            phone.setText(object.getString("phone").toString());
-//                            gioi.setText(object.getString("gender").toString());
-//                            if(gioi.getText().toString().equals("0"))
-//                                gioi.setText("Nam");
-//                            else
-//                                gioi.setText("Nữ");
-//                            address.setText(object.getString("address").toString());
-//                            td.setText(object.getString("perr").toString());
-//                            date.setText(object.getString("dob").toString());
-//
-//
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                        //accountArrayList
-//                    }
-//                },
-//                new com.android.volley.Response.ErrorListener(){
-//
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        Toast.makeText(getContext(),"loikkkkkkkkkkk",Toast.LENGTH_SHORT).show();
-//
-//                    }
-//                }
-//        );
-//        requestQueue.add(jsonArrayRequest);
+
 
 //        DataClient dataClient= APIUtils.getData();
 //        Call<List<Account>> callback=dataClient.profile(id.trim());

@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="15dp"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="40dp"
-    android:layout_marginEnd="30dp">
+    android:layout_marginEnd="0dp"
+    app:cardCornerRadius="15dp">
 
     <RelativeLayout
         android:layout_width="230dp"
-        android:layout_height="260dp"
-        >
+        android:layout_height="260dp">
+
         <LinearLayout
             android:id="@+id/ii"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:orientation="vertical"
-            android:background="@drawable/box4">
+            android:background="@drawable/box4"
+            android:orientation="vertical">
+
             <ImageView
 
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giasuhocsinh"
                 android:background="@drawable/box"
-                />
+                android:src="@drawable/giasuhocsinh" />
         </LinearLayout>
+
         <TextView
+            android:id="@+id/tim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đang tìm gia sư"
-            android:layout_marginTop="5dp"
+            android:layout_below="@id/ii"
             android:layout_marginLeft="70dp"
-            android:layout_below="@id/ii"/>
+            android:layout_marginTop="5dp"
+            android:text="Đang tìm gia sư" />
 
         <LinearLayout
             android:id="@+id/l"
@@ -44,31 +46,71 @@
             android:paddingLeft="10dp"
             android:paddingTop="20dp">
 
-            <TextView
-                android:id="@+id/txtnameclass"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/app_name"
-                android:textStyle="bold" />
+                android:layout_centerHorizontal="true">
 
-            <TextView
-                android:id="@+id/txtsubject"
+                <TextView
+                    android:id="@+id/txtnameclass1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lớp: "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtnameclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtnameclass1"
+                    android:text="@string/app_name"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/app_name"
-                android:textStyle="bold" />
+                android:layout_centerHorizontal="true">
 
-            <TextView
-                android:id="@+id/txtmoney"
+                <TextView
+                    android:id="@+id/txtsubject1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Môn Học: "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtsubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtsubject1"
+                    android:text="@string/app_name"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/app_name"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true">
 
-                />
+                <TextView
+                    android:id="@+id/txtmoney1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Học phí: "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtmoney1"
+                    android:text="@string/app_name"
+                    android:textStyle="bold" />
+            </RelativeLayout>
         </LinearLayout>
 
         <ImageView
@@ -94,16 +136,30 @@
             android:textSize="10dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txtonline"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/btnacpt"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:text="@string/app_name"
-            android:textColor="#00a8ff"
-            android:textSize="10dp" />
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/txtonline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hình thức dạy: "
+                android:textColor="#00a8ff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txtonline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txtonline1"
+                android:text="@string/app_name"
+                android:textColor="#00a8ff"
+                android:textSize="10dp" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/btnacpt"

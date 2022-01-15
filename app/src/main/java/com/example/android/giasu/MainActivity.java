@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
         mNavigationView = findViewById(R.id.bottomNavigationView);
+        Intent intent=getIntent();
+        Bundle bundle=intent.getBundleExtra("account");
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main, new Fragment_home()).commit();
 
@@ -52,11 +54,12 @@ public class MainActivity extends AppCompatActivity {
                         mCurrentFragment = FRAGMENT_HOME;
                         break;
                     case R.id.action_email:
-                        fragment = new Fragment_email();
+                        fragment = new Fragment_mess();
                         mCurrentFragment = FRAGMENT_MESS;
                         break;
                     case R.id.action_create:
                         fragment = new Fragment_create();
+                        fragment.setArguments(bundle);
                         mCurrentFragment = FRAGMENT_CREATE;
                         break;
                     case R.id.action_proflie:

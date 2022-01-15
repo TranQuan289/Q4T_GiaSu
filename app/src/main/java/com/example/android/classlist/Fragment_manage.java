@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.Retrofig2.APIUtils;
+import com.example.android.Retrofig2.DataClient;
 import com.example.android.giasu.Fragment_profile;
 import com.example.android.giasu.R;
 import com.example.android.teacherclass.DetailPostFragment;
@@ -20,11 +22,15 @@ import com.example.android.teacherclass.DetailPostFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Fragment_manage extends Fragment {
     private RecyclerView rcvRoom;
     private List<Room> roomList;
     private ManageAdapter roomAdapter;
-
+    private Room room;
     public Fragment_manage() {
     }
 
@@ -44,14 +50,13 @@ public class Fragment_manage extends Fragment {
         });
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext()));
         rcvRoom.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        roomAdapter.setData(getListRoom());
-        rcvRoom.setAdapter(roomAdapter);
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment4(new Fragment_profile());
             }
         });
+        getRoomList();
         return v;
     }
 
@@ -59,18 +64,19 @@ public class Fragment_manage extends Fragment {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
-
-    private List<Room> getListRoom() {
-        List<Room> list = new ArrayList<>();
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        list.add(new Room("Lớp : 8", "Môn : Toán Học", "Học phí : 30k/1h", R.drawable.ic_local, "Hải Châu, Đà Nẵng", "Hình thức dạy: online"));
-        return list;
+    private void getRoomList() {
+        DataClient dataClient = APIUtils.getData();
+        Call<List<Room>> callback = dataClient.getRoomList();
+        callback.enqueue(new Callback<List<Room>>() {
+            @Override
+            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
+                ArrayList<Room> listRoom = (ArrayList<Room>) response.body();
+                roomAdapter = new ManageAdapter(listRoom, room);
+                rcvRoom.setAdapter(roomAdapter);
+            }
+            @Override
+            public void onFailure(Call<List<Room>> call, Throwable t) {
+            }
+        });
     }
 }

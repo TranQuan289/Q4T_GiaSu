@@ -9,8 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    ImageView bg,logo;
-    private static int x=3000;
+    ImageView bg, logo;
+    private static int x = 3000;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +29,9 @@ public class SplashActivity extends AppCompatActivity {
     private void nextActivity() {
 //        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 //        if (currentUser == null) {
-            Intent intent = new Intent(this, Login.class);
-            startActivity(intent);
-            finish();
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+        finish();
 //        } else {
 //            checkUser();
 //        }

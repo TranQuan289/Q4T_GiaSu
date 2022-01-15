@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.giasu.R;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder>{
@@ -48,17 +49,17 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        user User = mlistUser.get(position);
-        if(User == null)
+        user User1 = mlistUser.get(position);
+        if(User1 == null)
         {
             return;
         }
-        holder.imgUser.setImageResource(User.getResourceId());
-        holder.txtname.setText(User.getName());
-        holder.txtkm.setText(User.getKm());
-        holder.txtloai.setText(User.getLoai());
-        holder.txtmon.setText(User.getMon());
-        holder.txtdiachi.setText(User.getDiachi());
+        holder.imgUser.setImageResource(R.drawable.avt);
+        holder.txtname.setText(User1.getName());
+        holder.txtkm.setText(User1.getFee());
+        holder.txtloai.setText(User1.getPerr());
+        holder.txtmon.setText(User1.getMon());
+        holder.txtdiachi.setText(User1.getAddress());
     }
 
     @Override

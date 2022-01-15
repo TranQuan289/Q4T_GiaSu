@@ -16,13 +16,19 @@ import java.util.List;
 public class ManageAdapter extends RecyclerView.Adapter<ManageAdapter.UserViewHolder> {
     private List<Room> mListRoom;
     private interfaceListPost interfaceListPost;
+    private Room room;
 
 
-    public void setData(List<Room> mListRoom){
+    public void setData(List<Room> mListRoom) {
         this.mListRoom = mListRoom;
         notifyDataSetChanged();
     }
 
+    public ManageAdapter(List<Room> roomList, Room room) {
+        this.mListRoom = roomList;
+        this.room = room;
+        notifyDataSetChanged();
+    }
     public ManageAdapter(List<Room> roomList, interfaceListPost interfaceListPost) {
         this.mListRoom = roomList;
         this.interfaceListPost = interfaceListPost;
@@ -32,42 +38,39 @@ public class ManageAdapter extends RecyclerView.Adapter<ManageAdapter.UserViewHo
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post, parent, false);
         return new UserViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        Room room  = mListRoom.get(position);
-        if(room == null){
+        Room room = mListRoom.get(position);
+        if (room == null) {
             return;
         }
 
-        holder.tvname.setText(room.getNameclass());
+        holder.tvname.setText(room.getGrade());
         holder.tvsubject.setText(room.getSubject());
-        holder.tvmoney.setText(room.getMoney());
-        holder.img.setImageResource(room.getResourceId());
-        holder.tvarea.setText(room.getArea());
-        holder.tvonline.setText(room.getOnline());
+        holder.tvmoney.setText(room.getFee());
+        holder.tvarea.setText(room.getAddress());
+        holder.tvonline.setText(room.getMethod());
     }
 
 
     @Override
     public int getItemCount() {
-        if(mListRoom!= null){
+        if (mListRoom != null) {
             return mListRoom.size();
         }
         return 0;
     }
 
-    public class    UserViewHolder extends RecyclerView.ViewHolder{
+    public class UserViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView img;
-        private TextView tvname,tvsubject,tvmoney,tvarea,tvonline;
+        private TextView tvname, tvsubject, tvmoney, tvarea, tvonline;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.img);
             tvname = itemView.findViewById(R.id.txtnameclass);
             tvsubject = itemView.findViewById(R.id.txtsubject);
             tvmoney = itemView.findViewById(R.id.txtmoney);

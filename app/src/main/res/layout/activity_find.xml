@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Tỉnh/ Thành Phố  "
+        android:text="Thông tin muốn tìm kiếm "
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/editText3"
@@ -17,15 +17,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.466" />
-    <EditText
+    <Spinner
         android:id="@+id/editText4"
-        android:layout_width="354dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:paddingLeft="10dp"
         android:drawableEnd="@drawable/ic_expand_more_24"
         android:paddingEnd="10dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.403"
@@ -33,15 +36,17 @@
         app:layout_constraintTop_toBottomOf="@+id/editText6"
         app:layout_constraintVertical_bias="0.15" />
 
-    <EditText
+    <Spinner
         android:id="@+id/editText6"
-        android:layout_width="354dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:paddingLeft="10dp"
-        android:drawableEnd="@drawable/ic_expand_more_24"
         android:paddingEnd="10dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,19 +56,20 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="354dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:paddingLeft="10dp"
-        android:drawableEnd="@drawable/ic_expand_more_24"
         android:paddingEnd="10dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/textView5"
@@ -72,6 +78,7 @@
         android:text="Môn học"
         android:textColor="#000000"
         android:textSize="14sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
@@ -84,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Môn học chi tiết"
+        android:text="Lớp học"
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,34 +101,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editText6"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    <RadioGroup-->
-<!--        android:id="@+id/radioGroup"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:orientation="horizontal"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/editText4">-->
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/rb1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="20dp"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:buttonTint="#1492E6"-->
-<!--            android:text="Gia sư" />-->
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/rb2"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="155dp"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:buttonTint="#1492E6"-->
-<!--            android:text="Người dùng" />-->
-<!--    </RadioGroup>-->
 
     <Button
         android:id="@+id/button"

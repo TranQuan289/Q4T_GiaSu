@@ -4,6 +4,7 @@ import com.example.android.Account;
 import com.example.android.Find.user;
 import com.example.android.classlist.Room;
 import com.example.android.classlist1.Room1;
+import com.example.android.mess.mess;
 import com.example.android.teacherclass.TeacherClass;
 import com.example.android.teacheruser.DetailTeacherSpotLightClass;
 import com.example.android.teacheruser.TeacherUser;
@@ -44,6 +45,9 @@ public interface DataClient {
     Call<List<TeacherClass>> getTeacherClass();
     @GET("detailTeacherSpotLight.php")
     Call<List<DetailTeacherSpotLightClass>> getDetailTeacherSpotLight(@Field("name") String name);
+
+    @GET("mess.php")
+    Call<List<mess>> getAllMess();
 
     @FormUrlEncoded
     @POST("post.php")

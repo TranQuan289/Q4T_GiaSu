@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         mCurrentFragment = FRAGMENT_HOME;
                         break;
                     case R.id.action_email:
-                        fragment = new Fragment_email();
+                        fragment = new Fragment_mess();
                         mCurrentFragment = FRAGMENT_MESS;
                         break;
                     case R.id.action_create:

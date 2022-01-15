@@ -42,6 +42,9 @@ public class DetailTeacherSpotLightFragment extends Fragment {
         txt_subject = v.findViewById(R.id.txt_subject);
         txt_method = v.findViewById(R.id.txt_method);
 
+        Bundle bundle = getArguments().getBundle("nameTeacher");
+
+
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

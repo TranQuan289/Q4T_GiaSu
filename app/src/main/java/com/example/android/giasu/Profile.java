@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.android.Find.Fragment_Find;
-import com.example.android.mess.MessFragment2;
 
 public class Profile extends Fragment {
     Button button;
@@ -34,7 +33,7 @@ public class Profile extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment4(new Fragment_email());
+                replaceFragment4(new Fragment_mess());
             }
         });
 

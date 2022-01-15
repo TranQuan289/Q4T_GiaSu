@@ -1,5 +1,6 @@
 package com.example.android.teacheruser;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -76,5 +77,11 @@ public class ListFragment extends Fragment {
 
             }
         });
+    }
+    private void onClickGoToDetail(TeacherUser user){
+        replaceFragment4(new DetailTeacherSpotLightFragment());
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("nameTeacher", user);
+
     }
 }

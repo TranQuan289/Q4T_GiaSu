@@ -12,10 +12,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.android.mess.messFragment;
 
-public class Fragment_email extends Fragment {
+public class Fragment_mess extends Fragment {
     View v;
 
-    public Fragment_email() {
+    public Fragment_mess() {
     }
 
     @Nullable

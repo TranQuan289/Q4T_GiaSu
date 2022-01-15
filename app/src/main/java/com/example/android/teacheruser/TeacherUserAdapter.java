@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -68,13 +69,13 @@ public class TeacherUserAdapter extends RecyclerView.Adapter<TeacherUserAdapter.
 
     public class UserViewHolder extends RecyclerView.ViewHolder{
 
-        private ImageView imAvatar;
+        private RelativeLayout imAvatar;
         private TextView tvname;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imAvatar = itemView.findViewById(R.id.img_avt);
+            imAvatar = itemView.findViewById(R.id.layout_item);
             tvname = itemView.findViewById(R.id.txtname);
         }
     }

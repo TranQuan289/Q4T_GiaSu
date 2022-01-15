@@ -1,8 +1,14 @@
 package com.example.android.Register;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -63,7 +69,7 @@ public class Register_Teacher extends AppCompatActivity {
                         public void onResponse(Call<String> call, Response<String> response) {
                             String result=response.body();
                             if(result.equals("success")){
-                                Toast.makeText(Register_Teacher.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+                                openDialog(Gravity.BOTTOM);
                                 Intent intent2=new Intent(Register_Teacher.this,Login.class);
                                 startActivity(intent2);
                             } else {
@@ -89,5 +95,25 @@ public class Register_Teacher extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+    }
+    private void openDialog(int gravity){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_register);
+        Window window = dialog.getWindow();
+        if(window == null){
+            return;
+        }
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams layoutParams = window.getAttributes();
+        layoutParams.gravity = gravity;
+        window.setAttributes(layoutParams);
+        if(Gravity.BOTTOM == gravity){
+            dialog.setCancelable(true);
+        }else {
+            dialog.setCancelable(false);
+        }
+        dialog.show();
     }
 }

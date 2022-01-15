@@ -1,24 +1,18 @@
 package com.example.android.teacheruser;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android.Account;
 import com.example.android.Retrofig2.APIUtils;
 import com.example.android.Retrofig2.DataClient;
-import com.example.android.giasu.Login;
-import com.example.android.giasu.MainActivity;
 import com.example.android.giasu.R;
 import com.example.android.spotlightTeacher;
 
@@ -36,11 +30,10 @@ public class ListFragment extends Fragment {
     private List<TeacherUser> mListUser;
     private TeacherUserAdapter userAdapter;
     private spotlightTeacher mSpotlightTeacher;
+    String name;
 
     public ListFragment() {
-    }
-
-    ;
+    };
 
     @Nullable
     @Override
@@ -53,7 +46,9 @@ public class ListFragment extends Fragment {
         userAdapter = new TeacherUserAdapter(mListUser, new RecyclerViewClickInterface() {
             @Override
             public void onItemClick(TeacherUser user) {
-                replaceFragment4(new TeacherUser2());
+                Bundle bundle = new Bundle();
+                replaceFragment4(new DetailTeacherSpotLightFragment());
+
             }
         });
         getSpotLightList();
@@ -64,6 +59,7 @@ public class ListFragment extends Fragment {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
+
     private void getSpotLightList() {
         DataClient dataClient = APIUtils.getData();
         Call<List<TeacherUser>> callback = dataClient.getSpotlightTeacher();
@@ -71,7 +67,7 @@ public class ListFragment extends Fragment {
             @Override
             public void onResponse(Call<List<TeacherUser>> call, Response<List<TeacherUser>> response) {
                 ArrayList<TeacherUser> listTeacher = (ArrayList<TeacherUser>) response.body();
-                userAdapter = new TeacherUserAdapter(listTeacher,mSpotlightTeacher);
+                userAdapter = new TeacherUserAdapter(listTeacher, mSpotlightTeacher);
                 rcvUser.setAdapter(userAdapter);
             }
 

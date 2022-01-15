@@ -4,18 +4,16 @@ import com.example.android.Account;
 import com.example.android.Find.user;
 import com.example.android.classlist.Room;
 import com.example.android.classlist1.Room1;
-import com.example.android.spotlightTeacher;
 import com.example.android.teacherclass.TeacherClass;
+import com.example.android.teacheruser.DetailTeacherSpotLightClass;
 import com.example.android.teacheruser.TeacherUser;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 
 public interface DataClient {
@@ -44,6 +42,8 @@ public interface DataClient {
     Call<List<Room1>> getRoomList1();
     @GET("teacherList.php")
     Call<List<TeacherClass>> getTeacherClass();
+    @GET("detailTeacherSpotLight.php")
+    Call<List<DetailTeacherSpotLightClass>> getDetailTeacherSpotLight(@Field("name") String name);
 
     @FormUrlEncoded
     @POST("post.php")

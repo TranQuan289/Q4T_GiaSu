@@ -1,9 +1,15 @@
 package com.example.android.giasu;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -58,6 +64,7 @@ public class Login extends AppCompatActivity {
                                 Intent login = new Intent(Login.this, MainActivity.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putSerializable("account", accountsList);
+                                openDialog(Gravity.BOTTOM);
                                 startActivity(login);
                             }
                         }
@@ -70,7 +77,6 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,5 +84,25 @@ public class Login extends AppCompatActivity {
                 startActivity(register);
             }
         });
+    }
+    private void openDialog(int gravity){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_login);
+        Window window = dialog.getWindow();
+        if(window == null){
+            return;
+        }
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams layoutParams = window.getAttributes();
+        layoutParams.gravity = gravity;
+        window.setAttributes(layoutParams);
+        if(Gravity.BOTTOM == gravity){
+            dialog.setCancelable(true);
+        }else {
+            dialog.setCancelable(false);
+        }
+        dialog.show();
     }
 }

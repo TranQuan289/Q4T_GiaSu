@@ -65,7 +65,7 @@ public class Login extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<List<Account>> call, Throwable t) {
-                            Toast.makeText(Login.this, "Tài khoảng không tồn tại"+t.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Tài khoảng không tồn tại", Toast.LENGTH_SHORT).show();
                         }
                     });
                 } else {

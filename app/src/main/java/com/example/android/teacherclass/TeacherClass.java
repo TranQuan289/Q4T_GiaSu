@@ -1,26 +1,37 @@
 package com.example.android.teacherclass;
 
 public class TeacherClass {
-    private int resourceId;
-    private String nameclass;
+    private String grade;
     private String name;
     private String subject;
-    private int local;
+    private String address;
+    private String method;
 
-    public int getResourceId() {
-        return resourceId;
+    public TeacherClass(String grade, String name, String subject, String address, String method) {
+        this.grade = grade;
+        this.name = name;
+        this.subject = subject;
+        this.address = address;
+        this.method = method;
     }
 
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    public String getGrade() {
+        return grade;
     }
 
-    public String getNameclass() {
-        return nameclass;
+    @Override
+    public String toString() {
+        return "TeacherClass{" +
+                "grade='" + grade + '\'' +
+                ", name='" + name + '\'' +
+                ", subject='" + subject + '\'' +
+                ", address='" + address + '\'' +
+                ", method='" + method + '\'' +
+                '}';
     }
 
-    public void setNameclass(String nameclass) {
-        this.nameclass = nameclass;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
     public String getName() {
@@ -39,14 +50,6 @@ public class TeacherClass {
         this.subject = subject;
     }
 
-    public int getLocal() {
-        return local;
-    }
-
-    public void setLocal(int local) {
-        this.local = local;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -55,25 +58,11 @@ public class TeacherClass {
         this.address = address;
     }
 
-    public String getOnline() {
-        return online;
+    public String getMethod() {
+        return method;
     }
 
-    public void setOnline(String online) {
-        this.online = online;
+    public void setMethod(String method) {
+        this.method = method;
     }
-
-    public TeacherClass(int resourceId, String nameclass, String name, String subject, int local, String address, String online) {
-        this.resourceId = resourceId;
-        this.nameclass = nameclass;
-        this.name = name;
-        this.subject = subject;
-        this.local = local;
-        this.address = address;
-        this.online = online;
-    }
-
-    private String address;
-    private String online;
-
 }

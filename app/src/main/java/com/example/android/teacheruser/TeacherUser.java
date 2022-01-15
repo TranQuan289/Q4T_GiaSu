@@ -1,16 +1,18 @@
 package com.example.android.teacheruser;
 
-public class TeacherUser {
-    private int resourceId;
+import com.example.android.spotlightTeacher;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class TeacherUser implements Serializable {
     private String name;
 
-
-    public int getResourceId() {
-        return resourceId;
-    }
-
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    @Override
+    public String toString() {
+        return "TeacherUser{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     public String getName() {
@@ -21,8 +23,7 @@ public class TeacherUser {
         this.name = name;
     }
 
-    public TeacherUser(int resourceId, String name) {
-        this.resourceId = resourceId;
+    public TeacherUser(String name) {
         this.name = name;
     }
 }

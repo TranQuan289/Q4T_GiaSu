@@ -3,11 +3,8 @@ package com.example.android.Register;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,16 +14,13 @@ import com.example.android.Retrofig2.DataClient;
 import com.example.android.giasu.Login;
 import com.example.android.giasu.R;
 
-import java.util.ArrayList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Register_User extends AppCompatActivity {
     Button reg,back;
-    String level;
-    EditText edtphone,edtdob,edtgrnder,edtaddress;
+    EditText edtphone,edtdob,edtgrnder,edtaddress,edtlevel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +33,7 @@ public class Register_User extends AppCompatActivity {
         edtdob=(EditText) findViewById(R.id.edttxtdate);
         edtgrnder=(EditText) findViewById(R.id.edttxtgender);
         edtaddress=(EditText) findViewById(R.id.edttxtaddress);
-        Spinner edtlevel=(Spinner) findViewById(R.id.edttxtlevel);
+        edtlevel=(EditText) findViewById(R.id.edttxtlevel);
 
         Intent intent=getIntent();
         Bundle bundle=intent.getBundleExtra("data");
@@ -49,34 +43,6 @@ public class Register_User extends AppCompatActivity {
         String pass=bundle.getString("pass");
         String perr=bundle.getString("perr");
 
-        ArrayList<String> levelList=new ArrayList<>();
-        levelList.add("1");
-        levelList.add("2");
-        levelList.add("3");
-        levelList.add("4");
-        levelList.add("5");
-        levelList.add("6");
-        levelList.add("7");
-        levelList.add("8");
-        levelList.add("9");
-        levelList.add("10");
-        levelList.add("11");
-        levelList.add("12");
-        ArrayAdapter monhocAdapter=new ArrayAdapter(Register_User.this,R.layout.support_simple_spinner_dropdown_item,levelList);
-        monhocAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        edtlevel.setAdapter(monhocAdapter);
-
-        edtlevel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                level=levelList.get(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +51,7 @@ public class Register_User extends AppCompatActivity {
                 String dob=edtdob.getText().toString().trim();
                 String gender=edtgrnder.getText().toString().trim();
                 String address=edtaddress.getText().toString().trim();
+                String level=edtlevel.getText().toString().trim();
 
                 if(! (phone.equals("") || dob.equals("") || gender.equals("") || address.equals("") || level.equals(""))) {
                     DataClient register= APIUtils.getData();

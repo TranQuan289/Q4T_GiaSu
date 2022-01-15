@@ -9,73 +9,104 @@
 
     <RelativeLayout
         android:background="#264354"
+        android:paddingLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="140dp">
 
-        <LinearLayout
-            android:id="@+id/l"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/txtnameclass1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:orientation="vertical">
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Lớp: " />
+        <TextView
+            android:id="@+id/txtnameclass"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/txtnameclass1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name" />
 
-            <TextView
-                android:id="@+id/txtnameclass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="17dp"
-                android:text="@string/app_name" />
+        <TextView
+            android:id="@+id/txtsubject1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtnameclass"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:text="Môn Học: " />
+        <TextView
+            android:id="@+id/txtsubject"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/txtsubject1"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtnameclass"
+            android:textColor="@color/white"
+            android:text="@string/app_name" />
 
-            <TextView
-                android:id="@+id/txtsubject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="17dp"
-                android:text="@string/app_name" />
+        <TextView
+            android:id="@+id/txtmoney1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/txtsubject"
+            android:text="Học Phí: " />
 
-            <TextView
-                android:id="@+id/txtmoney"
-                android:textSize="17dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/app_name" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/txtmoney"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/txtmoney1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_below="@id/txtsubject"
+            android:text="@string/app_name" />
 
         <ImageView
             android:id="@+id/img"
+            android:paddingLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/l"
-            android:paddingLeft="16dp"
-            android:layout_marginTop="13dp"
+            android:layout_below="@+id/txtmoney"
+            android:layout_marginTop="5dp"
             android:src="@drawable/ic_local" />
 
         <TextView
             android:id="@+id/txtarea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/l"
-            android:layout_marginTop="15dp"
+            android:layout_below="@+id/txtmoney"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/img"
             android:text="@string/app_name"
             android:textColor="#0fbe37"
-            android:textSize="15dp" />
-
+            android:textSize="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hình thức dạy:"
+            android:textColor="#0fbe37"
+            android:paddingRight="5dp"
+            android:textSize="10dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/txtonline"
+            />
         <TextView
             android:id="@+id/txtonline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#0fbe37"
+            android:paddingRight="10dp"
+            android:textSize="10dp"
+            android:paddingBottom="5dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:paddingRight="10dp"
-            android:paddingBottom="5dp"
             android:text="@string/app_name"
-            android:textColor="#0fbe37"
-            android:textSize="15dp" />
+            />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

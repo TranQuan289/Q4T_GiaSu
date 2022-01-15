@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txt_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sinh viên"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <TextView
-        android:id="@+id/TextView7"
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="8dp"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_level" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -86,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_level" />
 
     <TextView
         android:id="@+id/txt_ttgiasu"
@@ -101,7 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_level" />
 
     <TextView
         android:id="@+id/txt_ttgiasu2"
@@ -151,7 +151,7 @@
 
         android:background="@drawable/ic_hand_right"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_level" />
 
     <ImageView
         android:id="@+id/hand3"
@@ -179,47 +179,85 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Tuổi:20"
-
+        android:text="Tuổi: "
         android:textSize="18dp"
         app:layout_constraintStart_toEndOf="@+id/hand2"
         app:layout_constraintTop_toBottomOf="@+id/txt_ttgiasu" />
-
+    <TextView
+        android:id="@+id/txt_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="20"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toRightOf="@id/txtage"
+        app:layout_constraintStart_toEndOf="@+id/txtage"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ttgiasu" />
     <TextView
         android:id="@+id/sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Giới tính: Nam"
+        android:text="Giới tính: "
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@id/hand2"
         app:layout_constraintTop_toBottomOf="@+id/txtage" />
-
+    <TextView
+        android:id="@+id/txt_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Nam"
+        app:layout_constraintHorizontal_bias="0"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/sex"
+        app:layout_constraintStart_toEndOf="@id/sex"
+        app:layout_constraintTop_toBottomOf="@+id/txtage" />
     <TextView
         android:id="@+id/address2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Môn dạy : LTDD"
+        android:text="Môn dạy: "
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toEndOf="@+id/hand4"
         app:layout_constraintTop_toBottomOf="@+id/address" />
-
     <TextView
-        android:id="@+id/address"
+        android:id="@+id/txt_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="LTDD"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/address2"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
+    <TextView
+    android:id="@+id/address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="16dp"
+    android:text="Địa chỉ: "
+    android:textSize="18dp"
+    app:layout_constraintStart_toEndOf="@+id/hand3"
+    app:layout_constraintTop_toBottomOf="@+id/sex" />
+    <TextView
+        android:id="@+id/txt_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:text="Địa chỉ: 48 Cao Thắng"
-
-
+        android:text="nhà "
         android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@+id/hand3"
+        app:layout_constraintStart_toEndOf="@+id/address"
         app:layout_constraintTop_toBottomOf="@+id/sex" />
 
     <ImageView
@@ -233,33 +271,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <CheckBox
-        android:id="@+id/ck_online"
+    <TextView
+        android:id="@+id/cb_online"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/white"
         android:fontFamily="monospace"
-        android:text="Online"
-        android:checked="true"
+        android:text="Hình Thức Dạy: "
+        android:textColor="@color/black"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_ttgiasu2" />
 
-    <CheckBox
-        android:id="@+id/ck_tainha"
+    <TextView
+        android:id="@+id/txt_method"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="monospace"
-        android:text="Tại nhà"
+        android:text="Offline"
+        android:textColor="@color/black"
+        android:enabled="false"
         android:textSize="16dp"
         android:checked="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.82"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/cb_online"
         app:layout_constraintTop_toBottomOf="@+id/txt_ttgiasu2" />
 
     <ImageView

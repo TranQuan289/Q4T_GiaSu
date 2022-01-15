@@ -18,10 +18,16 @@ public class TeacherClassAdapter extends RecyclerView.Adapter<TeacherClassAdapte
 
     private List<TeacherClass> classList;
     private InterfaceListUser interfaceListUser;
+    private TeacherClass teacherClass;
 
     public TeacherClassAdapter(List<TeacherClass> classList, InterfaceListUser interfaceListUser) {
         this.classList = classList;
         this.interfaceListUser = interfaceListUser;
+        notifyDataSetChanged();
+    }
+    public TeacherClassAdapter(List<TeacherClass> classList, TeacherClass teacherClass) {
+        this.classList = classList;
+        this.teacherClass = teacherClass;
         notifyDataSetChanged();
     }
     public void setData(List<TeacherClass> classList){
@@ -42,13 +48,11 @@ public class TeacherClassAdapter extends RecyclerView.Adapter<TeacherClassAdapte
         if (teacherClass == null) {
             return;
         }
-        holder.img1.setImageResource(teacherClass.getResourceId());
-        holder.img2.setImageResource(teacherClass.getLocal());
         holder.tvname.setText(teacherClass.getName());
-        holder.tvnameclass.setText(teacherClass.getNameclass());
+        holder.tvnameclass.setText(teacherClass.getGrade());
         holder.tvsubject.setText(teacherClass.getSubject());
         holder.tvaddress.setText(teacherClass.getAddress());
-        holder.tvonline.setText(teacherClass.getOnline());
+        holder.tvonline.setText(teacherClass.getMethod());
         holder.rlt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,17 +69,14 @@ public class TeacherClassAdapter extends RecyclerView.Adapter<TeacherClassAdapte
     }
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
-        private ImageView img1, img2;
         private TextView tvnameclass, tvsubject, tvname, tvaddress, tvonline;
         private RelativeLayout rlt;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
-            img1 = itemView.findViewById(R.id.img_avt3);
             tvnameclass = itemView.findViewById(R.id.txtclass3);
             tvname = itemView.findViewById(R.id.txtname3);
             tvsubject = itemView.findViewById(R.id.txtsubject3);
-            img2 = itemView.findViewById(R.id.img3);
             tvaddress = itemView.findViewById(R.id.txtaddress3);
             tvonline = itemView.findViewById(R.id.txtonline3);
             rlt = itemView.findViewById(R.id.rlt);

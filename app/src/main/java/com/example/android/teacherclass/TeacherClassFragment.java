@@ -12,15 +12,23 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.Retrofig2.APIUtils;
+import com.example.android.Retrofig2.DataClient;
+import com.example.android.classlist1.Room1;
 import com.example.android.giasu.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class TeacherClassFragment extends Fragment {
     private RecyclerView rcvlist;
     private List<TeacherClass> classList;
     private TeacherClassAdapter userAdapter;
+    private TeacherClass teacherClass;
     public TeacherClassFragment(){
     };
 
@@ -37,8 +45,7 @@ public class TeacherClassFragment extends Fragment {
                 replaceFragment4(new TeacherClass2());
             }
         });
-        userAdapter.setData(getmListTeacher());
-        rcvlist.setAdapter(userAdapter);
+        getTeacherClass();
         return v;
     }
 
@@ -47,17 +54,21 @@ public class TeacherClassFragment extends Fragment {
         transaction.replace(R.id.main,fragment);
         transaction.commit();
     }
-    private List<TeacherClass> getmListTeacher(){
-        List<TeacherClass> list = new ArrayList<>();
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        list.add(new TeacherClass(R.drawable.avt,"Lớp: 8","Trần Anh Quân","Môn Học : Hoá", R.drawable.ic_local,"Hải Châu","Hình thức dạy học: online >"));
-        return list;
+    private void getTeacherClass(){
+        DataClient dataClient = APIUtils.getData();
+        Call<List<TeacherClass>> callback = dataClient.getTeacherClass();
+        callback.enqueue(new Callback<List<TeacherClass>>() {
+            @Override
+            public void onResponse(Call<List<TeacherClass>> call, Response<List<TeacherClass>> response) {
+                ArrayList<TeacherClass> TeacherClass = (ArrayList<TeacherClass>) response.body();
+                userAdapter = new TeacherClassAdapter(TeacherClass,teacherClass);
+                rcvlist.setAdapter(userAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<TeacherClass>> call, Throwable t) {
+
+            }
+        });
     }
 }

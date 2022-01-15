@@ -29,26 +29,29 @@ public class messFragment extends Fragment {
     private List<mess> messList;
     private messAdapter messAdapter;
     private mess mess;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View v = inflater.inflate(R.layout.fragment_list3,container,false);
+        View v = inflater.inflate(R.layout.fragment_list3, container, false);
         rcvlist = v.findViewById(R.id.rcv_user);
         rcvlist.setLayoutManager(new LinearLayoutManager(getContext()));
-        rcvlist.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-       messAdapter = new messAdapter(messList, new InterfaceMess() {
-           @Override
-           public void onItemClick(mess mess) {
-               replaceFragment4(new MessFragment2());
-           }
-       });
+        rcvlist.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+        messAdapter = new messAdapter(messList, new InterfaceMess() {
+            @Override
+            public void onItemClick(mess mess) {
+                replaceFragment4(new MessFragment2());
+            }
+        });
         return v;
     }
-    private void replaceFragment4(Fragment fragment){
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main,fragment).addToBackStack(null).commit();
+
+    private void replaceFragment4(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, fragment).addToBackStack(null).commit();
     }
-    private void getMessAll(){
+
+    private void getMessAll() {
         DataClient dataClient = APIUtils.getData();
         Call<List<mess>> callback = dataClient.getAllMess();
         callback.enqueue(new Callback<List<mess>>() {

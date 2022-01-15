@@ -1,5 +1,6 @@
 package com.example.android.giasu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -13,6 +14,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView mNavigationView;
+
 
     private static final int FRAGMENT_HOME = 0;
     private static final int FRAGMENT_MESS = 1;
@@ -32,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.main, new Fragment_home()).commit();
 
         mNavigationView.setSelectedItemId(R.id.action_home);
+
+        Intent data = MainActivity.this.getIntent();
+        Bundle bundle= data.getBundleExtra("login_data");
+
+        Fragment fragment = new update_profile();
+
+
+
         mNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -51,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_proflie:
                         fragment = new Fragment_profile();
+                        fragment.setArguments(bundle);
                         mCurrentFragment = FRAGMENT_PROFILE;
                         break;
                 }

@@ -29,6 +29,7 @@ public class Login extends AppCompatActivity {
     Button btnlogin;
     EditText edtemail,edtpass;
     String email,pass;
+    public static String id="1";
     ArrayList<Account> accountArrayList  ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class Login extends AppCompatActivity {
                 pass=edtpass.getText().toString().trim();
                 if(email.length()>0 && pass.length()>0){
                     DataClient dataClient= APIUtils.getData();
-                    Call<List<Account>> callback=dataClient.Logindata("thinh@gmail.com","123");
+                    Call<List<Account>> callback=dataClient.Logindata(email,pass);
                     callback.enqueue(new Callback<List<Account>>() {
                         @Override
                         public void onResponse(Call<List<Account>> call, Response<List<Account>> response) {
@@ -67,10 +68,12 @@ public class Login extends AppCompatActivity {
                                 profile_static.setDob(accountsList.get(0).getDob());
                                 profile_static.setImage(accountsList.get(0).getImage());
                                 profile_static.setId(accountsList.get(0).getId());
+                                id=(accountsList.get(0).getId());
 
                                 Intent login = new Intent(Login.this, MainActivity.class);
                                 Bundle bundle=new Bundle();
                                 bundle.putSerializable("account",accountsList);
+                                login.putExtra("login_data",bundle);
                                 startActivity(login);
                             }
                         }
@@ -91,5 +94,13 @@ public class Login extends AppCompatActivity {
                 startActivity(register);
             }
         });
+    }
+
+    public static String getId() {
+        return id;
+    }
+
+    public static void setId(String id) {
+        Login.id = id;
     }
 }

@@ -7,18 +7,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.android.Account;
 import com.example.android.Register.ChangePassFragment;
 import com.example.android.classlist.Fragment_manage;
 import com.example.android.teacheruser.TeacherUser2;
 
+import java.util.List;
+
 public class Fragment_profile extends Fragment {
-    TextView logout, profile,txt_manage,txt_changepass;
+    TextView logout, profile,txt_manage,txt_changepass,txtname,txtcv;
     RelativeLayout relativeLayout;
 
     @Nullable
@@ -29,7 +33,21 @@ public class Fragment_profile extends Fragment {
         logout = (TextView) v.findViewById(R.id.textlogout);
         profile = (TextView) v.findViewById(R.id.txtProfile);
         txt_manage = v.findViewById(R.id.txt_manage);
+        txtname =v.findViewById(R.id.txt_name);
+        txtcv = v.findViewById(R.id.textView14);
+
+
+
         relativeLayout = (RelativeLayout) v.findViewById(R.id.relativeLayout);
+
+        List<Account> accounts = (List<Account>) getArguments().get("account");
+        txtname.setText(accounts.get(0).getName());
+        if(accounts.get(0).getPerr().equals("0"))
+            txtcv.setText("Gia Sư");
+        else
+            txtcv.setText("Học Sinh");
+
+        //Toast.makeText(getContext(), accounts.get(0).getName(), Toast.LENGTH_SHORT).show();
 
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override

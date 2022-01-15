@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.example.android.Retrofig2.APIUtils;
 import com.example.android.Retrofig2.DataClient;
 import com.example.android.giasu.Fragment_profile;
+import com.example.android.giasu.Login;
 import com.example.android.giasu.R;
 
 import retrofit2.Call;
@@ -28,7 +30,8 @@ public class ChangePassFragment extends Fragment{
     ImageView img_back;
     Button change;
     EditText pass,pass1,pass_old;
-    String id="1";
+    public Login login;
+    String id=login.id;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,12 +44,15 @@ public class ChangePassFragment extends Fragment{
 
 
 
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                replaceFragment4(new Fragment_profile());
-            }
-        });
+//        img_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                replaceFragment4(new Fragment_profile());
+//            }
+//        });
+
+
+
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,8 +64,11 @@ public class ChangePassFragment extends Fragment{
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
                             String string = response.body().toString().trim();
-                            if (string != null)
+                            if (string != null) {
                                 Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity(), Login.class);
+                                startActivity(intent);
+                            }
                         }
 
                         @Override

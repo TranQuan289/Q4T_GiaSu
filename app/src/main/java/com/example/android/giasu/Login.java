@@ -65,7 +65,6 @@ public class Login extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<List<Account>> call, Throwable t) {
-                            edtemail.setText(t.toString());
                             Toast.makeText(Login.this, "Tài khoảng không tồn tại"+t.toString(), Toast.LENGTH_SHORT).show();
                         }
                     });

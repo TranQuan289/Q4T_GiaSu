@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.android.Account;
 import com.example.android.Retrofig2.APIUtils;
 import com.example.android.Retrofig2.DataClient;
+import com.example.android.get_student;
 import com.example.android.profile_static;
 import com.example.android.tutar;
 
@@ -62,6 +63,19 @@ public class profile_user extends Fragment {
         {
             ic_class.setVisibility(View.INVISIBLE);
             class1.setVisibility(View.INVISIBLE);
+            DataClient dataClient= APIUtils.getData();
+            Call<List<get_student>> callback=dataClient.get_student(id);
+           callback.enqueue(new Callback<List<get_student>>() {
+               @Override
+               public void onResponse(Call<List<get_student>> call, Response<List<get_student>> response) {
+                   td.setText(response.body().get(0).getLevel());
+               }
+
+               @Override
+               public void onFailure(Call<List<get_student>> call, Throwable t) {
+
+               }
+           });
 
         }
         else

@@ -3,6 +3,7 @@ package com.example.android.Retrofig2;
 import androidx.annotation.FractionRes;
 
 import com.example.android.Account;
+import com.example.android.get_student;
 import com.example.android.tutar;
 
 import java.util.List;
@@ -54,6 +55,10 @@ public interface DataClient {
     @FormUrlEncoded
     @POST("get_tutor.php")
     Call<List<tutar>> get_tutor (@Field("id") String id);
+
+    @FormUrlEncoded
+    @POST("get_student.php")
+    Call<List<get_student>> get_student (@Field("id") String id);
 
 
 }
